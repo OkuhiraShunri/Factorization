@@ -1,4 +1,4 @@
-module SEG7DEC(//1の位専用の7セグ
+module SEG7DEC_ONE(//1の位専用の7セグ
      input [3:0] DIN,
      output reg [6:0] nHEX
 );
