@@ -30,21 +30,21 @@ end
 
 
 always @( posedge CLK)begin //HPを減らしていく
-    if(HP_IN = 2'b01)begin //先に自分が正解
+    if(HP_IN == 3'b01) //先に自分が正解
         ENEMY_HP <= ENEMY_HP - LEVEL;
-     else if(HP_IN = 2'b10) //相手が先に正解
+     else if(HP_IN == 3'b10) //相手が先に正解
         MY_HP <= MY_HP - LEVEL;
-     end
+     
  end
 
 always @( posedge CLK)begin  //最終的にHPが0になった時
-    if(ENEMY_HP == 0)begin //相手HP0 自分の勝ち
-        RESULT <= 2'b10;
+    if(ENEMY_HP == 0)//相手HP0 自分の勝ち
+        RESULT <= 3'b10;
     else if(MY_HP == 0) //自分HP0 自分負け
-        RESULT <= 2'b01;
+        RESULT <= 3'b01;
     else
-        RESULT <= 2'b00;  //それ以外
-    end  
+        RESULT <= 3'b00;  //それ以外
+    
 
  end   
 
