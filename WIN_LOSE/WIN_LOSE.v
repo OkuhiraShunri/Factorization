@@ -6,19 +6,19 @@ module WIN_LOSE ( //どっちの正解が早かったかというモジュール
 );
 
 initial begin
- WL_OUT <= 2b'00;
+ WL_OUT <= 3'b00;
  end   
 
 always @(posedge CLK) begin
-    if(ENEMY && MINE)begin
-        WL_OUT <= 11; //ドロー
+    if(ENEMY && MINE)
+        WL_OUT <= 3'b11; //ドロー
     else if(ENEMY == 1 && MINE == 0)
-        WL_OUT <= 10; //相手勝ち
+        WL_OUT <= 3'b10; //相手勝ち
     else if(MINE  == 1 && ENEMY == 0)
-        WL_OUT <= 01; //自分勝ち
+        WL_OUT <= 3'b01; //自分勝ち
     else
-        WL_OUT <= 00; //無入力、その他
-    end            
+        WL_OUT <= 3'b00; //無入力、その他
+          
 end
 
     
