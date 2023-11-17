@@ -16,14 +16,14 @@ reg[3:0] cur,nxt;
 localparam  READY = 4'b0010, QUESTION = 4'b0011, INPUT = 4'b0100, DRAW = 4'b0110
             , WRONG = 4'b0111, GOOD = 4'b1000, OUCH = 4'b1001, WIN = 4'b1010, LOSE = 4'b1011;
 
-reg R1 , R2, R3;
+reg R1 , R2, R3, R4, R5, R6;
 initial begin 
 	 R1 = 0; //SEL_IN[0]
 	 R2 = 0; //SEL_IN[1]
 	 R3 = 0; //SEL_IN[2]
-     R4 = 0; //DEC_IN
-     R5 = 0; //CLR_IN
-     R6 = 0; //QUE_IN
+   R4 = 0; //DEC_IN
+   R5 = 0; //CLR_IN
+   R6 = 0; //QUE_IN
 
 
 end
@@ -89,22 +89,51 @@ end
 
 reg NEED_1SEC;//タイマーを動かすためのフラグ
 
+always @(posedge  CLK) begin
+    case(cur)
+      READY:    STATE <= 4'b0010;//入力モジュールに現在の状態をわたす。
+      QUESTION: STATE <= 4'b0011;
+      INPUT:    STATE <= 4'b0100;
+      WRONG:    STATE <= 4'b0111;
+      GOOD:     STATE <= 4'b1000;
+      OUCH:     STATE <= 4'b1001;
+      DRAW:     STATE <= 4'b0110;
+      WIN:      STATE <= 4'b1010;
+      LOSE:     STATE <= 4'b1011; 
+  endcase
+end
+
+always @(posedge  CLK) begin
+  NEED_1SEC <= 0;
+    case(cur)
+      WRONG:   NEED_1SEC <= 1; 
+      GOOD:    NEED_1SEC <= 1;
+      OUCH:    NEED_1SEC <= 1; 
+      DRAW:    NEED_1SEC <= 1; 
+      WIN:     NEED_1SEC <= 1; 
+      LOSE:    NEED_1SEC <= 1;  
+  endcase
+end
+
+
+
+
 always @(posedge CLK)begin
-    NEED_1SEC <= 0;
+    
     case(cur)   
-        READY:  STATE <= 4'b0010;//入力モジュールに現在の状態をわたす。
+        READY: 
                 if(OK_IN && QUE) //二人ともスタート押した、かつ入力モジュールに問題が格納されている
                     nxt <= QUESTION; //問題表示
                 else
                     nxt <= READY;
 
-        QUESTION: STATE <= 4'b0011;
+        QUESTION:
                    if(R6 == 1 && QUE) //入力画面に遷移するボタン押す、かつ入力モジュールに問題が格納されている
                     nxt <= INPUT;
                    else 
-                    nxt <= QUESTION;
+                    nxt <= QUESTION; 
         
-        INPUT:  STATE <= 4'b0100;
+        INPUT: 
                 if(R6 == 0 && QUE)
                     nxt <= QUESTION;
                 else if(WRONG_IN)
@@ -118,15 +147,15 @@ always @(posedge CLK)begin
                 else
                     nxt <= INPUT;
 
-        WRONG: STATE <= 4'b0111;
-               NEED_1SEC <= 1;
+        WRONG: 
+               
                if(EN1HZ)
                 nxt <= INPUT;
                else 
                 nxt <= WRONG;
         
-        GOOD: STATE <= 4'b1000;
-              NEED_1SEC <= 1;
+        GOOD: 
+             
               if(EN1HZ)
                 nxt <= READY;
               else if(HP_IN == 01) 
@@ -134,8 +163,8 @@ always @(posedge CLK)begin
               else
                 nxt <= GOOD;
 
-        OUCH: STATE <= 4'b1001;
-              NEED_1SEC <= 1;
+        OUCH: 
+              
               if(EN1HZ)
                 nxt <= READY;
               else if(HP_IN == 10)
@@ -143,22 +172,22 @@ always @(posedge CLK)begin
               else 
                 nxt <= OUCH;
 
-        DRAW: STATE <= 4'0110;
-              NEED_1SEC <= 1;
+        DRAW: 
+              
               if(EN1HZ)
                 nxt <= READY;
               else
                 nxt <= DRAW;
 
-        WIN: STATE <= 4'b1010;
-             NEED_1SEC <= 1;
+        WIN: 
+            
              if(EN1HZ)
                nxt <= READY;
              else 
                nxt <= WIN;
 
-        LOSE:STATE <= 4'b1011; 
-             NEED_1SEC <= 1; 
+        LOSE:
+             
              if(EN1HZ)
                nxt <= READY;
              else 
@@ -175,9 +204,9 @@ end
 
 always @(posedge CLK)begin
     if(RST)
-      cnt <= 26'0;
+      cnt <= 26'b0;
     else if(EN1HZ || NEED_1SEC == 0)
-      cnt <= 26'0;
+      cnt <= 26'b0;
     else if(NEED_1SEC == 1)
       cnt <= cnt + 26'b1; 
     else 
