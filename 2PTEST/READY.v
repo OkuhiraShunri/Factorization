@@ -27,7 +27,7 @@ always @(posedge CLK)begin
   if(RST)
     sec <= 4'h0;
   else if(en1hz)
-    if(sec == 4'h9)         //0 ~ 9 
+    if(sec == 4'h6)         //0 ~ 5 
       sec <= 4'h0;
     else
       sec <= sec + 4'h1;    //secはen1hzに同期してインクリメントされる
