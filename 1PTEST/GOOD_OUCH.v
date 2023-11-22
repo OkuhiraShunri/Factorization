@@ -1,4 +1,4 @@
-module WIN_LOSE ( //どっちの正解が早かったかというモジュール
+module GOOD_OUCH ( //どっちの正解が早かったかというモジュール
     input   CLK,RST,
     input   MINE ,//正誤判定のoutput
     input   ENEMY, //相手の正解を受け取る   1が正解 [1:0]が不要かも

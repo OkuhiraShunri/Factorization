@@ -1,32 +1,32 @@
-module check(
+module CHECK(
 input CLK,RST,
-input [23:0] check_in,
-input [35:0] num_array,
-output reg [1:0] result//LEDにわたす
+input [11:0] CHECK_IN,
+input [25:0] NUM_ARRAY,
+output reg [1:0] RESULT//LEDにわたす
 );
 
-reg [23:0] answer;
-reg [23:0] answer_check;
+reg [11:0] answer;  //正解
+reg [11:0] answer_check; //1Pの回答
 
 always@(posedge CLK)begin
-answer <= num_array[23:0];//回答切り出し
+  answer <= NUM_ARRAY[11:0];//正解切り出し
 
-answer_check <= check_in;
+  answer_check <= CHECK_IN;
 end
 
 
 always @(posedge CLK)begin
-  if(answer_check == 24'b0) begin
-    result <= result;
+  if(answer_check == 12'b0) begin
+    RESULT <= RESULT;
   end
   else if(RST)
-    result <= 2'b00;
+    RESULT <= 2'b00;
   else if(answer == answer_check)
-    result <= 2'b01;
+    RESULT <= 2'b01;
   else if(answer != answer_check)
-    result <= 2'b11;    
+    RESULT <= 2'b11;    
   else
-    result <= 2'b00;  
+    RESULT <= 2'b00;  
 end
 
 

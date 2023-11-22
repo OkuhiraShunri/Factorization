@@ -1,6 +1,6 @@
 module CONTROL(
-    input [2:0] SEL_IN,
-    input CLK, RST, DEC_IN, CLR_IN, QUE_IN, READY_IN,
+    input [2:0] SEL,
+    input CLK, RST, DEC, CLR_IN, QUE_IN, READY,
     input OK_IN, //二人ともスタート押して、READYモジュールからその信号を受け取る。
     input [1:0] HP_IN,//00は無入力,01は自分の勝ち,10は相手の勝ち
     input QUE,//入力側に問題が入ってれば値は1、入ってなければ0
@@ -18,10 +18,10 @@ localparam  READY = 4'b0010, QUESTION = 4'b0011, INPUT = 4'b0100, DRAW = 4'b0110
 
 reg R1 , R2, R3, R4, R5, R6;
 initial begin 
-	 R1 = 0; //SEL_IN[0]
-	 R2 = 0; //SEL_IN[1]
-	 R3 = 0; //SEL_IN[2]
-   R4 = 0; //DEC_IN
+	 R1 = 0; //SEL[0]
+	 R2 = 0; //SEL[1]
+	 R3 = 0; //SEL[2]
+   R4 = 0; //DEC
    R5 = 0; //CLR_IN
    R6 = 0; //QUE_IN
 
@@ -29,30 +29,30 @@ initial begin
 end
 	
 always @(posedge CLK) begin   //Generate Toggle Wave → 信号を出しぱなしにする
-    if(R1 == 0 && SEL_IN[0]) //最初は上記initial文より、R1の値は0です。そこで、SWをオンにして、SEL_IN[0]が1になったら、R1は1を放出し続けます。
+    if(R1 == 0 && SEL[0]) //最初は上記initial文より、R1の値は0です。そこで、SWをオンにして、SEL[0]が1になったら、R1は1を放出し続けます。
 	    R1 <= 1;
-	else if(R1 == 1 && SEL_IN[0])//そして、またもう一回swをオンにしたら、さっきR1は1を放出してたけど、次は0を放出し続けるようになります。
+	else if(R1 == 1 && SEL[0])//そして、またもう一回swをオンにしたら、さっきR1は1を放出してたけど、次は0を放出し続けるようになります。
 		R1 <= 0;
 end
 
 always @(posedge CLK) begin   //Generate Toggle Wave
-    if(R2 == 0 && SEL_IN[1])
+    if(R2 == 0 && SEL[1])
 	    R2 <= 1;
-	else if(R2 == 1 && SEL_IN[1])
+	else if(R2 == 1 && SEL[1])
 		R2 <= 0;
 end
 
 always @(posedge CLK) begin   //Generate Toggle Wave
-    if(R3 == 0 && SEL_IN[2])
+    if(R3 == 0 && SEL[2])
 	    R3 <= 1;
-	else if(R3 == 1 && SEL_IN[2])
+	else if(R3 == 1 && SEL[2])
 		R3 <= 0;
 end
 
 always @(posedge CLK) begin   //Generate Toggle Wave
-    if(R4 == 0 && DEC_IN)
+    if(R4 == 0 && DEC)
 	    R4 <= 1;
-	else if(R4 == 1 && DEC_IN)
+	else if(R4 == 1 && DEC)
 		R4 <= 0;
 end
 
@@ -82,10 +82,10 @@ end
 
 always @(posedge CLK)begin //output
     if(cur == READY)
-        READY_OUT <= READY_IN;
+        READY_OUT <= READY;
     if(cur == INPUT)begin    
-        SEL_OUT <= SEL_IN;
-        DEC_OUT <= DEC_IN;
+        SEL_OUT <= SEL;
+        DEC_OUT <= DEC;
         CLR_OUT <= CLR_IN;
     end
 end
