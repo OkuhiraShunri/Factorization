@@ -4,10 +4,24 @@ module READY(
 );//1HZイネーブル信号生成
 
 reg  run_in;
+reg  keep_1;
+
+initial begin
+  keep_1 = 0;
+  end
+
 always @(posedge CLK)begin
-  if(IN_1P && IN_2P)                   //チャタリングを噛ますか考えて
+  if(IN_1P)   //1発来たらずっと1
+    keep_1 = 1;
+    else if(STATE == ) //最後の状態で0 exp) lose win
+    keep_1 = 0;
+     
+ end 
+
+always @(posedge CLK)begin
+  if(keep_1 && IN_2P)                   //チャタリングを噛ますか考えて
     run_in <= 1;
-  else
+  else 
    run_in <= 0;
  end
 
