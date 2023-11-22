@@ -1,5 +1,6 @@
 module READY(
   input CLK, RST, IN_1P, IN_2P, //1p,2pのinput追加
+  input [3:0]STATE,
   output reg[3:0] num
 );//1HZイネーブル信号生成
 
