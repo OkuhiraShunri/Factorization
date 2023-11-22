@@ -21,64 +21,7 @@ initial begin
       SEG6 <= 0;
 end
 
-/*always@(posedge CLK)begin
-  SEG1 <= SEG1_r;
-  SEG2 <= SEG2_r;
-  SEG3 <= SEG3_r;
-  SEG4 <= SEG4_r;
-  SEG5 <= SEG5_r;
-  SEG6 <= SEG6_r;
-end*/
 
-
-
-
-/*always@(posedge CLK)begin
-    if(RST)begin
-        SEG1 <= 0;
-        SEG2 <= 0;
-        SEG3 <= 0;
-        SEG4 <= 0;
-        SEG5 <= 0;
-        SEG6 <= 0;
-    end
-    else if(SEL_IN[0])begin
-        SEG1 <= COUNT1;
-        SEG2 <= COUNT1;
-    end
-    else if(SEL_IN[1])begin
-        SEG3 <= COUNT2;
-        SEG4 <= COUNT2;
-    end
-    else if(SEL_IN[2])begin
-        SEG5 <= COUNT3;
-        SEG6 <= COUNT3;
-    end
-    else if(RESULT_IN == 2'b01)begin//wrong
-      SEG1 <= 4'd1;
-      SEG2 <= 4'd1;
-      SEG3 <= 4'd1;
-      SEG4 <= 4'd1;
-      SEG5 <= 4'd1;
-      SEG6 <= 4'd1;
-	 end
-	 else if(RESULT_IN == 2'b11)begin//correct
-      SEG1 <= 4'd2;
-      SEG2 <= 4'd2;
-      SEG3 <= 4'd2;
-      SEG4 <= 4'd2;
-      SEG5 <= 4'd2;
-      SEG6 <= 4'd2;
-	 end
-	 else begin
-      SEG1 <= SEG1;
-      SEG2 <= SEG2;
-      SEG3 <= SEG3;
-      SEG4 <= SEG4;
-      SEG5 <= SEG5;
-      SEG6 <= SEG6;
-	end
-end*/
 
 always@(posedge CLK)begin
     if(RST)begin

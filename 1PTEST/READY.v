@@ -1,5 +1,5 @@
 module READY(
-  input CLK, RST, READY_1P,
+  input CLK, RST, READY_1P, OK,
   output reg[3:0] NUM
 );//1HZイネーブル信号生成
 reg [25:0] cnt;
@@ -21,11 +21,15 @@ always @(posedge CLK)begin
     if(sec == 4'h9)
       sec <= 4'h0;
     else
-      sec <= sec + 4'h1;    //secはen1hzに同期してインクリメントされる
+      sec <= sec + 4'h1;    //secはen1hzに同期してインクリメントされる. secは内部で常に可動しているタイマーみたいなもの
 end
 
+reg READY_2P;
+initial begin
+    READY_2P <= 1;//2pもボタン押してるとする
+end
 always @(posedge CLK)begin
-  if(READY_1P)
+  if(READY_1P == 1 && READY_2P == 1)
     NUM <= sec;
   else
     NUM <= NUM;
