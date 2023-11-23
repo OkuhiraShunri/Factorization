@@ -18,14 +18,12 @@ localparam  READY = 4'b0010, QUESTION = 4'b0011, INPUT = 4'b0100, DRAW = 4'b0110
 
 reg R1 , R2, R3, R4, R5, R6;
 initial begin 
-	 R1 = 0; //SEL[0]
-	 R2 = 0; //SEL[1]
-	 R3 = 0; //SEL[2]
+   R1 = 0; //SEL[0]
+   R2 = 0; //SEL[1]
+   R3 = 0; //SEL[2]
    R4 = 0; //DEC
    R5 = 0; //CLR_IN
    R6 = 0; //QUE_IN
-
-
 end
 	
 always @(posedge CLK) begin   //Generate Toggle Wave → 信号を出しぱなしにする
@@ -69,6 +67,8 @@ always @(posedge CLK) begin   //Generate Toggle Wave
 	else if(R6 == 1 && QUE_IN)
 		R6 <= 0;
 end
+
+
 
 
 always @( posedge CLK) begin //

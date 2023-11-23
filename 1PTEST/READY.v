@@ -1,7 +1,7 @@
 module READY(
   input CLK, RST, READY_1P, OK,
   output reg[3:0] NUM
-  output reg RUN_IN;
+  output reg OK;
 );//1HZイネーブル信号生成
 
 reg READY_2P;
@@ -10,9 +10,9 @@ initial begin
 end
 always @(posedge CLK)begin
   if(READY_1P == 1 && READY_2P == 1)                   //チャタリングを噛ますか考えて
-    RUN_IN <= 1;
+    OK <= 1;
   else
-   RUN_IN <= 0;
+   OK <= 0;
 end
 
 reg [25:0] cnt;
@@ -42,7 +42,7 @@ initial begin
     READY_2P <= 1;//2pもボタン押してるとする
 end
 always @(posedge CLK)begin
-  if(RUN_IN)
+  if(OK)
     NUM <= sec;
   else
     NUM <= NUM;
