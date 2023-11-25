@@ -1,8 +1,7 @@
 module READY(
   input CLK, RST, READY_1P,
   input [3:0] STATE,
-//>>>>>>> a931610401cb96d25d58121868e8e0fe056ed320
-  output reg[3:0] NUM
+  output reg[3:0] NUM,
   output reg OK;
 );//1HZイネーブル信号生成
 
@@ -18,22 +17,30 @@ always @(posedge CLK)begin
 end*/
 
 
-reg  run_in;
+reg  run_in;//二人ともボタン押したらこのレジスタが1にかわる
 reg  keep_1;
+reg READY_2P;
 
 initial begin
   keep_1 = 0;
-//>>>>>>> a931610401cb96d25d58121868e8e0fe056ed320
+  READY_2P <= 1;//2pもボタン押してるとする
 end
 
 always @(posedge CLK)begin
-  if(READY_1P)   //1発来たらずっと1
-    keep_1 = 1;
-    else if(STATE == ) //最後の状態で0 exp) lose win
-    keep_1 = 0;
-     
- end 
+  if(READY_1P)   //制御部から1発のパルスが来たらずっとkeep_1が1を保持しておく
+    keep_1 <= 1;
+    else if(STATE == 2'b0110 || STATE == 2'b1000 || STATE == 2'b1001 || STATE == 2'b1010 || STATE == 2'b1011) //順番にSTATEは、DRAW,GOOD,OUCH,WIN,LOSEをあらわす
+    keep_1 <= 0;
+    else
+    keep_1 <= keep_1;
+end 
 
+always @(posedge CLK)begin
+  if(keep_1 && READY_2P)                   //二人とも押した状態
+    run_in <= 1;
+  else 
+    run_in <= 0;
+end
 
 
 
@@ -59,14 +66,14 @@ always @(posedge CLK)begin
       sec <= sec + 4'h1;    //secはen1hzに同期してインクリメントされる. secは内部で常に可動しているタイマーみたいなもの
 end
 
-reg READY_2P;
-initial begin
-    READY_2P <= 1;//2pもボタン押してるとする
-end
+
 always @(posedge CLK)begin
-  if(OK)
-    NUM <= sec;
-  else
+  if(run_in)begin
+    NUM <= sec;//DBに渡すアウトプット
+    OK <= 1;//制御部に渡すアウトプット
+  end
+  else begin
     NUM <= NUM;
+  end
 end
 endmodule

@@ -1,5 +1,5 @@
 module SEG7DEC_ONE(//1の位専用の7セグ
-     input [3:0] DIN,
+     input [3:0] DIN,//COUNTの値4bitをここで受信する
      output reg [6:0] nHEX
 );
 

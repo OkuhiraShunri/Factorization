@@ -1,5 +1,5 @@
-module SEG7DEC(
-     input [3:0] DIN,
+module SEG7DEC_TEN(
+     input [3:0] DIN,//COUNTの値4bitをここで受信する
      output reg [6:0] nHEX
 );
 
