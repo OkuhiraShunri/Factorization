@@ -5,6 +5,7 @@ module INPUT(
   input  DEC, CLK, RST,//DECは決定
 	 //input [1:0] RESULT, 
   output reg [3:0] SEG1, SEG2, SEG3, SEG4, SEG5, SEG6,
+  output reg [3:0] SEG1_Q, SEG2_Q, SEG3_Q, 
 	output reg [3:0] COUNT1_OUT, COUNT2_OUT, COUNT3_OUT,
   output reg QUE_OK//INPUTモジュールに問題を格納できたと制御部に伝える信号。
 );
@@ -24,19 +25,19 @@ COUNT = 4 => 7
 */
 
 reg [3:0] COUNT1, COUNT2, COUNT3;
-reg [13:0] QUESTION_r;// 難易度 + 問題をいれる箱
+reg [11:0] QUESTION_r;// 難易度 + 問題をいれる箱
 
 initial begin
-  QUESTION_r <= 14'b0;//初期値はゼロで空っぽ
+  QUESTION_r <= 12'b0;//初期値はゼロで空っぽ
 end
 
 always @(posedge CLK)begin
-  QUESTION_r <= QUESTION[25:12]//DBから受け取った問題セットから、難易度と問題だけを切り取り、保存しておく
+  QUESTION_r <= QUESTION[23:12]//DBから受け取った問題セットから、難易度と問題だけを切り取り、保存しておく
 end
 
 always @(posedge CLK) begin
   if(STATE == 4'b0110 || STATE == 4'b1000 || STATE == 4'b1001 || STATE == 4'b1010 || STATE == 4'b1011)begin//DRAW, GOOD, OUCH, WIN, LOSE
-    QUESTION_r <= 14'b0;//上記if文の条件でQUESTION_rはリセットされる。次の問題を格納できるように
+    QUESTION_r <= 12'b0;//上記if文の条件でQUESTION_rはリセットされる。次の問題を格納できるように
 
     COUNT1 <= 4'b0;//COUNTもリセットされる
     COUNT2 <= 4'b0;
@@ -85,10 +86,10 @@ always@(posedge CLK)begin
       SEG6 <= COUNT3;
 	 end
    else if(STATE == 4'b0011)begin//STATE == QUESTION
-      SEG1 <= QUESTION_r[3:0]  //1の位    SEG7DEC_ONEモジュールにわたす4bit
-      SEG2 <= QUESTION_r[7:4]  //10の位   SEG7DEC_TENモジュールにわたす4bit
-      SEG3 <= QUESTION_r[11:8] //100の位  SEG7DEC_ONEモジュールにわたす4bit
-      SEG6 <= QUESTION_r[13:12]//難易度   SEG7DEC_ONEモジュールにわたす4bit
+      SEG1_Q <= QUESTION_r[3:0]  //1の位    SEG7DEC_ONEモジュールにわたす4bit
+      SEG2_Q <= QUESTION_r[7:4]  //10の位   SEG7DEC_TENモジュールにわたす4bit
+      SEG3_Q <= QUESTION_r[11:8] //100の位  SEG7DEC_ONEモジュールにわたす4bit
+      //SEG4_Q <= QUESTION_r[13:12]//難易度   SEG7DEC_ONEモジュールにわたす4bit
    end
 end
 
