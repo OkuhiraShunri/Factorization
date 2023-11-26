@@ -1,6 +1,6 @@
 module CONTROL(
     input [2:0] SEL,
-    input CLK, RST, DEC, CLR_IN, QUE_IN, READY,
+    input CLK, RST, DEC, CLR_IN, QUE_IN, READY_IN,
     input OK_IN, //二人ともスタート押して、READYモジュールからその信号を受け取る。
     input [1:0] HP_IN,//00は無入力,01は自分の勝ち,10は相手の勝ち
     input QUE,//入力側に問題が入ってれば値は1、入ってなければ0
@@ -40,28 +40,28 @@ always @(posedge CLK) begin   //Generate Toggle Wave
 		R2 <= 0;
 end
 
-always @(posedge CLK) begin   //Generate Toggle Wave
+always @(posedge CLK) begin   //Generate Toggle Wave　
     if(R3 == 0 && SEL[2])
 	    R3 <= 1;
 	else if(R3 == 1 && SEL[2])
 		R3 <= 0;
 end
 
-always @(posedge CLK) begin   //Generate Toggle Wave
+always @(posedge CLK) begin   //Generate Toggle Wave　決定ボタン
     if(R4 == 0 && DEC)
 	    R4 <= 1;
 	else if(R4 == 1 && DEC)
 		R4 <= 0;
 end
 
-always @(posedge CLK) begin   //Generate Toggle Wave
+always @(posedge CLK) begin   //Generate Toggle Wave　クリア
     if(R5 == 0 && CLR_IN)
 	    R5 <= 1;
 	else if(R5 == 1 && CLR_IN)
 		R5 <= 0;
 end
 
-always @(posedge CLK) begin   //Generate Toggle Wave
+always @(posedge CLK) begin   //Generate Toggle Wave 問題確認
     if(R6 == 0 && QUE_IN)
 	    R6 <= 1;
 	else if(R6 == 1 && QUE_IN)
@@ -82,7 +82,7 @@ end
 
 always @(posedge CLK)begin //output
     if(cur == READY)
-        READY_OUT <= READY;
+        READY_OUT <= READY_IN;
     if(cur == INPUT)begin    
         SEL_OUT <= SEL;
         DEC_OUT <= DEC;
@@ -95,15 +95,15 @@ reg NEED_1SEC;//タイマーを動かすためのフラグ
 
 always @(posedge  CLK) begin
     case(cur)
-      READY:    STATE <= 4'b0010;//入力モジュールに現在の状態をわたす。
-      QUESTION: STATE <= 4'b0011;
-      INPUT:    STATE <= 4'b0100;
-      WRONG:    STATE <= 4'b0111;
-      GOOD:     STATE <= 4'b1000;
-      OUCH:     STATE <= 4'b1001;
-      DRAW:     STATE <= 4'b0110;
-      WIN:      STATE <= 4'b1010;
-      LOSE:     STATE <= 4'b1011; 
+      READY:    STATE = 4'b0010;//入力モジュールに現在の状態をわたす。
+      QUESTION: STATE = 4'b0011;
+      INPUT:    STATE = 4'b0100;
+      WRONG:    STATE = 4'b0111;
+      GOOD:     STATE = 4'b1000;
+      OUCH:     STATE = 4'b1001;
+      DRAW:     STATE = 4'b0110;
+      WIN:      STATE = 4'b1010;
+      LOSE:     STATE = 4'b1011; 
   endcase
 end
 

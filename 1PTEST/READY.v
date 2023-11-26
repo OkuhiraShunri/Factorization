@@ -2,7 +2,7 @@ module READY(
   input CLK, RST, READY_1P,
   input [3:0] STATE,
   output reg[3:0] NUM,
-  output reg OK;
+  output reg OK
 );//1HZイネーブル信号生成
 
 /*reg READY_2P;
@@ -74,6 +74,7 @@ always @(posedge CLK)begin
   end
   else begin
     NUM <= NUM;
+    OK <= 0;
   end
 end
 endmodule

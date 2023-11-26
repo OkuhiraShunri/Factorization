@@ -128,6 +128,8 @@ module DE10_LITE_Golden_Top(
 //=======================================================
 
 
+TEST test(.CLK(MAX10_CLK1_50), .HEX0(HEX0), .HEX1(HEX1), .HEX2(HEX2), .HEX3(HEX3), .HEX4(HEX4), .HEX5(HEX5),
+			 .RST(SW[2]), .KEY({SW[9:7], KEY[0], SW[1], SW[0], KEY[1]}), .LEDR(LEDR[0]));
 
 
 //=======================================================
