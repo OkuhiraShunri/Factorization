@@ -10,11 +10,15 @@ wire dec, clr, que, ready;
 
 BTN_IN b0 (.CLK(CLK), .RST(RST), .nBIN(KEY), .BOUT({sel, dec, clr, que, ready}));
 
-wire [2:0] sel2;
+//wire [2:0] sel2;
 wire [3:0] state;
-wire dec2, clr2, que2, ready2, ok;
-CONTROL c0 (.CLK(CLK), .RST(RST), .SEL(sel), .DEC(dec), .CLR_IN(clr), .QUE_IN(que), .READY_IN(ready), .OK_IN(ok), .QUE(que2), .STATE(state),
-            .SEL_OUT(sel2), .DEC_OUT(dec2), .READY_OUT(ready2), .CLR_OUT(clr2));
+//wire dec2, clr2, que2, ready2, ok;
+wire ready2, ok;
+// CONTROL c0 (.CLK(CLK), .RST(RST), .SEL(sel), .DEC(dec), .CLR_IN(clr), .QUE_IN(que), .READY_IN(ready), .OK_IN(ok), .QUE(que2), .STATE(state),
+//             .SEL_OUT(sel2), .DEC_OUT(dec2), .READY_OUT(ready2), .CLR_OUT(clr2));
+
+CONTROL c0 (.CLK(CLK), .RST(RST), .QUE_IN(que), .READY_IN(ready), .OK_IN(ok), .QUE(que2), .STATE(state), .READY_OUT(ready2));
+
 
 
 wire [3:0] num;
@@ -26,7 +30,9 @@ wire [23:0] que3;
 DB d0(.CLK(CLK), .RST(RST), .OK(ok), .QUESTION(que3));
 
 wire [3:0] seg1, seg2, seg3, seg4, seg5, seg6, seg1_q, seg2_q, seg3_q;
-INPUT i0 (.CLK(CLK), .RST(RST), .SEL(sel2), .DEC(dec2), .CLR_IN(clr2), .STATE(state), .QUESTION(que3), .QUE_OK(que2), 
+// INPUT i0 (.CLK(CLK), .RST(RST), .SEL(sel2), .DEC(dec2), .CLR_IN(clr2), .STATE(state), .QUESTION(que3), .QUE_OK(que2), 
+//           .SEG1(seg1), .SEG2(seg2), .SEG3(seg3), .SEG4(seg4), .SEG5(seg5), .SEG6(seg6), .SEG1_Q(seg1_q), .SEG2_Q(seg2_q), .SEG3_Q(seg3_q), .LED(LEDR) );
+INPUT i0 (.CLK(CLK), .RST(RST), .SEL(sel), .DEC(dec), .CLR(clr), .STATE(state), .QUESTION(que3), .QUE_OK(que2), 
           .SEG1(seg1), .SEG2(seg2), .SEG3(seg3), .SEG4(seg4), .SEG5(seg5), .SEG6(seg6), .SEG1_Q(seg1_q), .SEG2_Q(seg2_q), .SEG3_Q(seg3_q), .LED(LEDR) );
 
 SEG7DEC_1 s0(.STATE(state), .DIN(seg1), .QUE(seg1_q), .nHEX(HEX0));

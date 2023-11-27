@@ -2,7 +2,7 @@ module INPUT(
   input [2:0] SEL,//SW[9] = SEL[2]:HEX[4], SW[8] = SEL[1]:HEX[2], SW[7] = SEL[0]:HEX[0]
   input [3:0] STATE,
   input [23:0] QUESTION,
-  input  DEC, CLK, RST, CLR_IN,//DECは決定
+  input  DEC, CLK, RST, CLR,//DECは決定
 	 //input [1:0] RESULT, 
   output reg [3:0] SEG1, SEG2, SEG3, SEG4, SEG5, SEG6,
   output reg [3:0] SEG1_Q, SEG2_Q, SEG3_Q, 
@@ -24,6 +24,61 @@ COUNT = 2 => 3
 COUNT = 3 => 5
 COUNT = 4 => 7 
 */
+//-------------------------------------------------------------Create Toggle Wave----------------------------------------------------------------------------------------------
+// reg R1 , R2, R3, R4, R5;
+// initial begin 
+//    R1 = 0; //SEL[0]
+//    R2 = 0; //SEL[1]
+//    R3 = 0; //SEL[2]
+//    R4 = 0; //DEC
+//    R5 = 0; //CLR
+// end
+	
+
+// always @(posedge CLK) begin   //Generate Toggle Wave → 信号を出しぱなしにする
+//     if(R1 == 0 && SEL[0]) //最初は上記initial文より、R1の値は0です。そこで、SWをオンにして、SEL[0]が1になったら、R1は1を放出し続けます。
+// 	    R1 <= 1;
+// 	else if(R1 == 1 && SEL[0])//そして、またもう一回swをオンにしたら、さっきR1は1を放出してたけど、次は0を放出し続けるようになります。
+// 		R1 <= 0;
+// end
+
+// always @(posedge CLK) begin   //Generate Toggle Wave
+//     if(R2 == 0 && SEL[1])
+// 	    R2 <= 1;
+// 	else if(R2 == 1 && SEL[1])
+// 		R2 <= 0;
+// end
+
+// always @(posedge CLK) begin   //Generate Toggle Wave　
+//     if(R3 == 0 && SEL[2])
+// 	    R3 <= 1;
+// 	else if(R3 == 1 && SEL[2])
+// 		R3 <= 0;
+// end
+
+// always @(posedge CLK) begin   //Generate Toggle Wave　決定ボタン
+//     if(R4 == 0 && DEC)
+// 	    R4 <= 1;
+// 	else if(R4 == 1 && DEC)
+// 		R4 <= 0;
+// end
+
+// always @(posedge CLK) begin   //Generate Toggle Wave　クリア
+//     if(R5 == 0 && CLR)
+// 	    R5 <= 1;
+// 	else if(R5 == 1 && CLR)
+// 		R5 <= 0;
+// end
+
+//-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
 
 
 initial begin
@@ -49,7 +104,7 @@ initial begin
 end
 
 always @(posedge CLK)begin
-  if(STATE == 4'b0110 || STATE == 4'b1000 || STATE == 4'b1001 || STATE == 4'b1010 || STATE == 4'b1011)begin
+  if(STATE == 4'b0110 || STATE == 4'b1000 || STATE == 4'b1001 || STATE == 4'b1010 || STATE == 4'b1011)begin//DRAW,OUCH,GOOD,WIN,LOSEのとき、
     QUESTION_r <= 12'b0;
   end
   else begin
@@ -59,7 +114,7 @@ end
 
 always @(posedge CLK)begin
   if(QUESTION_r == 12'b0)begin
-    QUE_OK <= QUE_OK;
+    QUE_OK <= 0;
   end
 	else if(QUESTION_r != 12'b0)begin//QUESTION_rの中身が空でない
 		QUE_OK <= 1;
@@ -141,7 +196,7 @@ always @(posedge CLK) begin//COUNT値の更新処理
           COUNT3 <= 1;
         end
     end
-    else if(CLR_IN || (STATE == 4'b0110 || STATE == 4'b1000 || STATE == 4'b1001 || STATE == 4'b1010 || STATE == 4'b1011))begin//CLR処理
+    else if(CLR || STATE == 4'b0110 || STATE == 4'b1000 || STATE == 4'b1001 || STATE == 4'b1010 || STATE == 4'b1011)begin//CLR処理
       COUNT1 <= 0;
       COUNT2 <= 0;
       COUNT3 <= 0;

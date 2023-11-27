@@ -1,4 +1,5 @@
 module SEG7DEC_1(
+     //input CLK,
      input [3:0] STATE,
      input [3:0] DIN,//SEG_Qの値4bitをここで受信する
      input [3:0] QUE,
@@ -6,14 +7,7 @@ module SEG7DEC_1(
 );
 
 
-
-
-
-
-
-
-
-always @* begin
+/*always @* begin
     case(STATE)
         4'b0010 : nHEX = 7'b1111011;
         4'b0011 : //nHEX = 7'b1000110;
@@ -46,19 +40,20 @@ always @* begin
             endcase
     endcase
     
-end
+end*/
 
 
 
 
 
 
-/*always @* begin
+always @* begin
     if(STATE == 4'b0010)begin//READY
-        nHEX = 7'b1111001;
-    end
+        nHEX = 7'b1111011;
+    end 
+
     else if(STATE == 4'b0011)begin//QUESTION
-        /*case(QUE)
+        case(QUE)
             4'h0:	nHEX = 7'b1000000;
             4'h1:	nHEX = 7'b1111001;
             4'h2:	nHEX = 7'b0100100;
@@ -71,7 +66,7 @@ end
             4'h9:	nHEX = 7'b0010000;
             default:nHEX = 7'b1111111;
         endcase
-        nHEX = 7'b0000000;
+        //nHEX = 7'b0000000;
     end
     else if(STATE == 4'b0100)begin//INPUT
         case(DIN)
@@ -88,7 +83,9 @@ end
             default:nHEX = 7'b1111111;//光ってない
         endcase
     end
-end */
+    //else nHEX = 7'b1111111;
+
+end
 
 
 /*always @* begin

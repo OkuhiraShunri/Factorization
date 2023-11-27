@@ -1,0 +1,6 @@
+C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/CONTROL.v {0 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/CONTROL.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module CONTROL
+** Error: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/CONTROL.v(212): (vlog-2730) Undefined variable: 'EN1HZ'.
+
+} {4.0 5.0} {}}

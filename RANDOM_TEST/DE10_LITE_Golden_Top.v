@@ -126,12 +126,9 @@ module DE10_LITE_Golden_Top(
 //=======================================================
 //  REG/WIRE declarations
 //=======================================================
-test test(
- .CLK(MAX10_CLK1_50), .RST(SW[9]),
- .KEY(KEY[0]),
- .HEX0(HEX0)
 
-);
+RANDOM r0(.CLK(MAX10_CLK1_50), .RST(SW[9]), .KEY(KEY[0]), .HEX0(HEX0));
+
 
 //=======================================================
 //  Structural coding

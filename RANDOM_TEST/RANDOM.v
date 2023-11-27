@@ -1,4 +1,4 @@
-module test(
+module RANDOM(
     input CLK,RST,
     input  KEY,
     output [6:0]HEX0
