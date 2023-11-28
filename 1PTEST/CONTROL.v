@@ -19,15 +19,15 @@ module CONTROL(
 
 //-----------------------------------------------------------Togle Wave------------------------------------------------------------------
 //reg R1 , R2, R3, R4, R5, R6;
-reg R6;
-initial begin 
+// reg R6;
+// initial begin 
   //  R1 = 0; //SEL[0]
   //  R2 = 0; //SEL[1]
   //  R3 = 0; //SEL[2]
   //  R4 = 0; //DEC
   //  R5 = 0; //CLR_IN
-   R6 = 0; //QUE_IN
-end
+  // R6 = 0; //QUE_IN
+// end
 	
 // always @(posedge CLK) begin   //Generate Toggle Wave → 信号を出しぱなしにする
 //     if(R1 == 0 && SEL[0]) //最初は上記initial文より、R1の値は0です。そこで、SWをオンにして、SEL[0]が1になったら、R1は1を放出し続けます。
@@ -64,12 +64,12 @@ end
 // 		R5 <= 0;
 // end
 
-always @(posedge CLK) begin   //Generate Toggle Wave 問題確認
-    if(R6 == 0 && QUE_IN)
-	    R6 <= 1;
-	else if(R6 == 1 && QUE_IN)
-		R6 <= 0;
-end
+// always @(posedge CLK) begin   //Generate Toggle Wave 問題確認
+//     if(R6 == 0 && QUE_IN)
+// 	    R6 <= 1;
+// 	else if(R6 == 1 && QUE_IN)
+// 		R6 <= 0;
+// end
 //---------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -175,6 +175,14 @@ always @(posedge CLK)begin
 end
 
 
+reg QUE_r;
+initial begin
+  QUE_r <= 0;
+end
+always @(posedge CLK) begin
+  QUE_r <= QUE_IN;
+end
+
 always @(posedge CLK)begin
     
     case(cur)   
@@ -187,13 +195,13 @@ always @(posedge CLK)begin
 
         QUESTION:
                    //if(R6 == 1 && QUE) //入力画面に遷移するボタン押す、かつ入力モジュールに問題が格納されている
-                   if(R6 == 1 && QUE)
+                   if(QUE_r == 1 && QUE)
                     nxt <= INPUT;
                    else 
                     nxt <= QUESTION; 
         
         INPUT: 
-                if(R6 == 0 && QUE)
+                if(QUE_r == 0 && QUE)
                     nxt <= QUESTION;
                 else if(WRONG_IN)
                     nxt <= WRONG;

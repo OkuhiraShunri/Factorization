@@ -1,0 +1,15 @@
+C:/Users/OkuhiraShunri/factori/Factorization/7SEG_SIM/SEG7_SIM.v {1 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/7SEG_SIM/SEG7_SIM.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SEG7_SIM
+
+Top level modules:
+	SEG7_SIM
+
+} {} {}} C:/Users/OkuhiraShunri/factori/Factorization/7SEG_SIM/SEG7DEC_1.v {1 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/7SEG_SIM/SEG7DEC_1.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SEG7DEC_1
+
+Top level modules:
+	SEG7DEC_1
+
+} {} {}}

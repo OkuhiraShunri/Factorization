@@ -1,5 +1,5 @@
 Flow report for 1PTEST
-Mon Nov 27 23:35:25 2023
+Tue Nov 28 22:48:29 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Mon Nov 27 23:35:09 2023           ;
+; Flow Status                        ; Successful - Tue Nov 28 22:48:13 2023           ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
 ; Revision Name                      ; 1PTEST                                          ;
 ; Top-level Entity Name              ; DE10_LITE_Golden_Top                            ;
 ; Family                             ; MAX 10                                          ;
 ; Device                             ; 10M50DAF484C6GES                                ;
 ; Timing Models                      ; Preliminary                                     ;
-; Total logic elements               ; 192 / 49,760 ( < 1 % )                          ;
-;     Total combinational functions  ; 190 / 49,760 ( < 1 % )                          ;
-;     Dedicated logic registers      ; 78 / 49,760 ( < 1 % )                           ;
-; Total registers                    ; 79                                              ;
+; Total logic elements               ; 261 / 49,760 ( < 1 % )                          ;
+;     Total combinational functions  ; 244 / 49,760 ( < 1 % )                          ;
+;     Dedicated logic registers      ; 126 / 49,760 ( < 1 % )                          ;
+; Total registers                    ; 127                                             ;
 ; Total pins                         ; 185 / 360 ( 51 % )                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                           ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/27/2023 23:33:55 ;
+; Start date & time ; 11/28/2023 22:47:00 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; 1PTEST              ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+----------------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name          ; Section Id ;
 +-------------------------------------+----------------------------------------+---------------+----------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 817182119215.170109563509956           ; --            ; --                   ; --         ;
+; COMPILER_SIGNATURE_ID               ; 817182119215.170117921901300           ; --            ; --                   ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --                   ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --                   ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; DE10_LITE_Golden_Top ; Top        ;
@@ -95,11 +95,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4810 MB             ; 00:00:18                           ;
-; Fitter               ; 00:00:30     ; 1.0                     ; 5974 MB             ; 00:00:11                           ;
-; Assembler            ; 00:00:35     ; 1.0                     ; 4688 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:15     ; 1.1                     ; 4872 MB             ; 00:00:02                           ;
-; Total                ; 00:01:41     ; --                      ; --                  ; 00:00:33                           ;
+; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4812 MB             ; 00:00:16                           ;
+; Fitter               ; 00:00:30     ; 1.0                     ; 5978 MB             ; 00:00:10                           ;
+; Assembler            ; 00:00:35     ; 1.0                     ; 4692 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:15     ; 1.1                     ; 4871 MB             ; 00:00:02                           ;
+; Total                ; 00:01:41     ; --                      ; --                  ; 00:00:30                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/OkuhiraShunri/factori/Factorization/7SEG_SIM
+vDB
+Z0 !s110 1701178315
+!i10b 1
+!s100 IPBGSdBfd=TgfaD5Bb5ki1
+IQ>l^JjBYEl>A6I]Knh@JM2
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/OkuhiraShunri/factori/Factorization/DB_SIM
+w1701178288
+8C:/Users/OkuhiraShunri/factori/Factorization/DB_SIM/DB.v
+FC:/Users/OkuhiraShunri/factori/Factorization/DB_SIM/DB.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1701178315.000000
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/DB_SIM/DB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/DB_SIM/DB.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@d@b
+vDB_SIM
+R0
+!i10b 1
+!s100 a:OQWY^zGL5Q:m40`ARig2
+IC?N?<ez>9IkEzm51Sd5fT0
+R1
+R2
+w1701178285
+8C:/Users/OkuhiraShunri/factori/Factorization/DB_SIM/DB_SIM.v
+FC:/Users/OkuhiraShunri/factori/Factorization/DB_SIM/DB_SIM.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/DB_SIM/DB_SIM.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/DB_SIM/DB_SIM.v|
+!i113 1
+R5
+R6
+n@d@b_@s@i@m

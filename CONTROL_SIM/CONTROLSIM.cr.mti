@@ -5,7 +5,7 @@ Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  
 Top level modules:
 	CONTROL_SIM
 
-} {} {}} C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/CONTROL.v {1 {vlog -work work2 -stats=none {C:\Users\OkuhiraShunri\factori\Factorization\1PTEST\CONTROL.v}
+} {} {}} C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/CONTROL.v {1 {vlog -work work2 -stats=none C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/CONTROL.v
 Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
 -- Compiling module CONTROL
 

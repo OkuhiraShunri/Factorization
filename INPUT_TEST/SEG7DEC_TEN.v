@@ -1,4 +1,4 @@
-module SEG7DEC(
+module SEG7DEC_TEN(
      input [3:0] DIN,
      output reg [6:0] nHEX
 );

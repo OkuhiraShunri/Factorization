@@ -26,8 +26,8 @@ READY r0 (.CLK(CLK), .RST(RST), .READY_1P(ready2), .STATE(state), .NUM(num), .OK
 
 
 wire [23:0] que3;
-//DB d0 (.CLK(CLK), .RST(RST), .NUM_IN(num), .QUESTION(que3));
-DB d0(.CLK(CLK), .RST(RST), .OK(ok), .QUESTION(que3));
+DB d0 (.CLK(CLK), .NUM_IN(num), .QUESTION(que3));
+//DB d0(.CLK(CLK), .RST(RST), .OK(ok), .QUESTION(que3));
 
 wire [3:0] seg1, seg2, seg3, seg4, seg5, seg6, seg1_q, seg2_q, seg3_q;
 // INPUT i0 (.CLK(CLK), .RST(RST), .SEL(sel2), .DEC(dec2), .CLR_IN(clr2), .STATE(state), .QUESTION(que3), .QUE_OK(que2), 

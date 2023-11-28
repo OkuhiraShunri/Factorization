@@ -16,11 +16,11 @@ wire [3:0] state;
 CONTROL a1(
  .CLK(clk),//INPUT
  .RST(rst),
- //.READY_IN(ready),
+ .READY_IN(ready),
  .QUE_IN(que),
  //.CLR_IN(clr),
- .DEC(dec),
- .SEL(sel),
+ //.DEC(dec),
+ //.SEL(sel),
  .OK_IN(ok),
  .HP_IN(hp),
  .QUE(que2),
@@ -67,9 +67,18 @@ initial begin
      //clr = 0;
      rst = 0;
 #50 ok = 1;//150ns
-#50  que2 = 1;
-#50  que = 1;
+ #50  que2 = 1;
+// #50  que2 = 1;
 
 end
+
+
+always begin
+  que = 0;
+#150 que = 1;
+#150;  
+end
+
+
 
 endmodule
