@@ -79,7 +79,7 @@ COUNT = 4 => 7
 
 
 
-
+reg [3:0] COUNT1, COUNT2, COUNT3;
 
 initial begin
       COUNT1 <= 4'b0;//4bitの理由は0から9までのカウントのため
@@ -96,7 +96,7 @@ initial begin
 		SEG3_Q <= 4'b0;
 end
 
-reg [3:0] COUNT1, COUNT2, COUNT3;
+
 reg [11:0] QUESTION_r;// 難易度 + 問題をいれる箱
 
 initial begin
@@ -137,7 +137,49 @@ end
 
 assign LED = LED_r;
 
+
+
+
 always @(posedge CLK) begin
+   if(STATE == 4'b0100)begin
+      SEG1 <= COUNT1;
+      SEG2 <= COUNT1;
+
+      SEG3 <= COUNT2;
+      SEG4 <= COUNT2;
+      
+      SEG5 <= COUNT3;
+      SEG6 <= COUNT3;
+   end
+   else begin
+      SEG1 <= 4'b0;
+      SEG2 <= 4'b0;
+
+      SEG3 <= 4'b0;
+      SEG4 <= 4'b0;
+      
+      SEG5 <= 4'b0;
+      SEG6 <= 4'b0;
+    end
+end
+     
+
+
+always @(posedge CLK) begin
+   if(STATE == 4'b0011)begin
+      SEG1_Q <= QUESTION_r[3:0];
+      SEG2_Q <= QUESTION_r[7:4];
+      SEG3_Q <= QUESTION_r[11:8];
+   end
+   else begin
+      SEG1_Q <= 4'b0;
+      SEG2_Q <= 4'b0;
+      SEG3_Q <= 4'b0;
+    end
+end
+
+
+/*always @(posedge CLK) begin
   if(STATE == 4'b0110 || STATE == 4'b1000 || STATE == 4'b1001 || STATE == 4'b1010 || STATE == 4'b1011)begin//DRAW, GOOD, OUCH, WIN, LOSE
     SEG1 <= 0;
     SEG2 <= 0;
@@ -159,8 +201,6 @@ always @(posedge CLK) begin
 
 end
 
-
-
 always@(posedge CLK)begin
   if(STATE == 4'b0110 || STATE == 4'b1000 || STATE == 4'b1001 || STATE == 4'b1010 || STATE == 4'b1011)begin//DRAW, GOOD, OUCH, WIN, LOSE
       SEG1_Q <= 0;
@@ -173,7 +213,7 @@ always@(posedge CLK)begin
       SEG2_Q <= QUESTION_r[7:4];  //10の位   SEG7DEC_TENモジュールにわたす4bit
       SEG3_Q <= QUESTION_r[11:8]; //100の位
 	end
-end
+end*/
 
 
 always @(posedge CLK) begin//COUNT値の更新処理
@@ -196,17 +236,22 @@ always @(posedge CLK) begin//COUNT値の更新処理
           COUNT3 <= 1;
         end
     end
-    else if(CLR || STATE == 4'b0110 || STATE == 4'b1000 || STATE == 4'b1001 || STATE == 4'b1010 || STATE == 4'b1011)begin//CLR処理
+    else if(CLR)begin//CLR処理
       COUNT1 <= 0;
       COUNT2 <= 0;
       COUNT3 <= 0;
     end
   end
-  else begin//STATEがINPUTでないときはなにもしない
-    COUNT1 <= COUNT1;
-    COUNT2 <= COUNT2;
-    COUNT3 <= COUNT3;
+  else if(STATE == 4'b0110 || STATE == 4'b1000 || STATE == 4'b1001 || STATE == 4'b1010 || STATE == 4'b1011)begin
+      COUNT1 <= 0;
+      COUNT2 <= 0;
+      COUNT3 <= 0;
   end
+  // else begin//STATEがINPUTでないときはなにもしない
+  //   COUNT1 <= COUNT1;
+  //   COUNT2 <= COUNT2;
+  //   COUNT3 <= COUNT3;
+  // end
 end
 
 always @(posedge CLK)begin//決定ボタンを押して正誤判定モジュールに自身の回答を送信させる処理。これも上と同様STATEがINPUTのときだけ許させる。

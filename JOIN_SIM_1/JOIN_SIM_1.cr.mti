@@ -1,0 +1,41 @@
+C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_1/DB.v {1 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_1/DB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DB
+
+Top level modules:
+	DB
+
+} {} {}} C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_1/JOIN_SIM_1.v {1 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_1/JOIN_SIM_1.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module JOIN_SIM_1
+
+Top level modules:
+	JOIN_SIM_1
+
+} {} {}} C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_1/JOIN.v {1 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_1/JOIN.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module JOIN
+
+Top level modules:
+	JOIN
+
+} {} {}} C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_1/READY.v {2 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_1/READY.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module READY
+** Warning: C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_1/READY.v(21): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_1/READY.v(21): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_1/READY.v(21): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_1/READY.v(21): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+** Warning: C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_1/READY.v(21): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+
+Top level modules:
+	READY
+
+} {} {}} C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_1/CONTROL.v {1 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_1/CONTROL.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module CONTROL
+
+Top level modules:
+	CONTROL
+
+} {} {}}

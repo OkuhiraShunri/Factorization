@@ -11,6 +11,7 @@ wire [3:0] seg1, seg2, seg3, seg4, seg5, seg6, seg1_q, seg2_q, seg3_q, count1, c
 wire led, ok;
 
 INPUT i0(
+//----------------input-----------
     .CLK(clk),
     .RST(rst),
     .STATE(state),
@@ -18,7 +19,7 @@ INPUT i0(
     .DEC(dec),
     .CLR(clr),
     .QUESTION(que),
-    
+ //----------------output----------   
     .SEG1(seg1),
     .SEG2(seg2),
     .SEG3(seg3),
@@ -46,8 +47,22 @@ end
 
 
 initial begin
-    num = 4'd4;
-  #50 num = 4'd0;
+   rst = 0;
+   sel = 3'b0;
+   dec = 0;
+   clr = 0;
+   que = 24'b0;
+   state = 4'b0010;//READY
+
+#50 que = 24'b000001000010000100100100;//Receive Question
+#20 state = 4'b0011;//QUESTION
+#50 state = 4'b0100;//INPUT
+    sel = 3'b001;
+#50 state = 4'b0011;//QUESTION
+#50 state = 4'b1000;//GOOD
+    
+
+   
 end
 
 endmodule

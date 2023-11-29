@@ -8,3 +8,47 @@ z2
 !i10f 100
 cModel Technology
 dC:/Users/OkuhiraShunri/factori/Factorization/DB_SIM
+vINPUT
+Z0 !s110 1701241093
+!i10b 1
+!s100 OR]aFi><>QX=<;ecAI?zB0
+IJ>0lWPHJH^fHeB=b0_2aQ3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/OkuhiraShunri/factori/Factorization/INPUT_SIM
+w1701241078
+8C:/Users/OkuhiraShunri/factori/Factorization/INPUT_SIM/INPUT.v
+FC:/Users/OkuhiraShunri/factori/Factorization/INPUT_SIM/INPUT.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1701241093.000000
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/INPUT_SIM/INPUT.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/INPUT_SIM/INPUT.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@i@n@p@u@t
+vINPUT_SIM
+R0
+!i10b 1
+!s100 NY846[H4>NKX9gofK97;N2
+I5_<WcjjE<T>k>KgT6UIC]1
+R1
+R2
+w1701240426
+8C:/Users/OkuhiraShunri/factori/Factorization/INPUT_SIM/INPUT_SIM.v
+FC:/Users/OkuhiraShunri/factori/Factorization/INPUT_SIM/INPUT_SIM.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/INPUT_SIM/INPUT_SIM.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/INPUT_SIM/INPUT_SIM.v|
+!i113 1
+R5
+R6
+n@i@n@p@u@t_@s@i@m

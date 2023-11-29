@@ -2,14 +2,41 @@
 
 module INPUT_SIM();
 
-reg clk;
-reg [3:0] num;
-wire [23:0] que;
+reg clk, rst, dec, clr;
+reg [3:0] state;
+reg [2:0] sel;
+reg [23:0] que;
 
-DB d0(
+wire [3:0] seg1, seg2, seg3, seg4, seg5, seg6, seg1_q, seg2_q, seg3_q, count1, count2, count3;
+wire led, ok;
+
+INPUT i0(
+//----------------input-----------
     .CLK(clk),
-    .NUM_IN(num),
-    .QUESTION(que)
+    .RST(rst),
+    .STATE(state),
+    .SEL(sel),
+    .DEC(dec),
+    .CLR(clr),
+    .QUESTION(que),
+ //----------------output----------   
+    .SEG1(seg1),
+    .SEG2(seg2),
+    .SEG3(seg3),
+    .SEG4(seg4),
+    .SEG5(seg5),
+    .SEG6(seg6),
+
+    .SEG1_Q(seg1_q),
+    .SEG2_Q(seg2_q),
+    .SEG3_Q(seg3_q),
+    
+    .COUNT1_OUT(count1),
+    .COUNT2_OUT(count2),
+    .COUNT3_OUT(count3),
+    .LED(led),
+    .QUE_OK(ok)
+
 );
 
 always begin
@@ -20,8 +47,21 @@ end
 
 
 initial begin
-    num = 4'd4;
-  #50 num = 4'd0;
+   rst = 0;
+   sel = 3'b0;
+   dec = 0;
+   clr = 0;
+   que = 24'b0;
+   state = 4'b0010;//READY
+
+#50 que = 24'b000001000010000100100100;//Receive Question
+#20 state = 4'b0011;//QUESTION
+#50 state = 4'b0100;//INPUT
+    sel = 3'b001;
+#50 state = 4'b0011;//QUESTION
+    
+
+   
 end
 
 endmodule

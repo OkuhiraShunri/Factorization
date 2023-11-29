@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 1PTEST
-Tue Nov 28 22:47:07 2023
+Wed Nov 29 20:49:16 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
 
 
@@ -51,15 +51,15 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Nov 28 22:47:07 2023           ;
+; Analysis & Synthesis Status        ; Successful - Wed Nov 29 20:49:16 2023           ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
 ; Revision Name                      ; 1PTEST                                          ;
 ; Top-level Entity Name              ; DE10_LITE_Golden_Top                            ;
 ; Family                             ; MAX 10                                          ;
-; Total logic elements               ; 274                                             ;
-;     Total combinational functions  ; 243                                             ;
-;     Dedicated logic registers      ; 127                                             ;
-; Total registers                    ; 127                                             ;
+; Total logic elements               ; 203                                             ;
+;     Total combinational functions  ; 195                                             ;
+;     Dedicated logic registers      ; 81                                              ;
+; Total registers                    ; 81                                              ;
 ; Total pins                         ; 185                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -195,20 +195,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------------+
 ; Resource                                    ; Usage               ;
 +---------------------------------------------+---------------------+
-; Estimated Total logic elements              ; 274                 ;
+; Estimated Total logic elements              ; 203                 ;
 ;                                             ;                     ;
-; Total combinational functions               ; 243                 ;
+; Total combinational functions               ; 195                 ;
 ; Logic element usage by number of LUT inputs ;                     ;
-;     -- 4 input functions                    ; 133                 ;
-;     -- 3 input functions                    ; 39                  ;
-;     -- <=2 input functions                  ; 71                  ;
+;     -- 4 input functions                    ; 102                 ;
+;     -- 3 input functions                    ; 49                  ;
+;     -- <=2 input functions                  ; 44                  ;
 ;                                             ;                     ;
 ; Logic elements by mode                      ;                     ;
-;     -- normal mode                          ; 198                 ;
-;     -- arithmetic mode                      ; 45                  ;
+;     -- normal mode                          ; 175                 ;
+;     -- arithmetic mode                      ; 20                  ;
 ;                                             ;                     ;
-; Total registers                             ; 127                 ;
-;     -- Dedicated logic registers            ; 127                 ;
+; Total registers                             ; 81                  ;
+;     -- Dedicated logic registers            ; 81                  ;
 ;     -- I/O registers                        ; 0                   ;
 ;                                             ;                     ;
 ; I/O pins                                    ; 185                 ;
@@ -216,9 +216,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0                   ;
 ;                                             ;                     ;
 ; Maximum fan-out node                        ; MAX10_CLK1_50~input ;
-; Maximum fan-out                             ; 127                 ;
-; Total fan-out                               ; 1441                ;
-; Average fan-out                             ; 1.78                ;
+; Maximum fan-out                             ; 81                  ;
+; Total fan-out                               ; 1156                ;
+; Average fan-out                             ; 1.61                ;
 +---------------------------------------------+---------------------+
 
 
@@ -227,19 +227,19 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                          ; Entity Name          ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------+----------------------+--------------+
-; |DE10_LITE_Golden_Top      ; 243 (0)             ; 127 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 185  ; 0            ; 0          ; |DE10_LITE_Golden_Top                        ; DE10_LITE_Golden_Top ; work         ;
-;    |TEST:test|             ; 243 (0)             ; 127 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|TEST:test              ; TEST                 ; work         ;
-;       |BTN_IN:b0|          ; 48 (48)             ; 39 (39)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|TEST:test|BTN_IN:b0    ; BTN_IN               ; work         ;
+; |DE10_LITE_Golden_Top      ; 195 (0)             ; 81 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 185  ; 0            ; 0          ; |DE10_LITE_Golden_Top                        ; DE10_LITE_Golden_Top ; work         ;
+;    |TEST:test|             ; 195 (0)             ; 81 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|TEST:test              ; TEST                 ; work         ;
+;       |BTN_IN:b0|          ; 47 (47)             ; 39 (39)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|TEST:test|BTN_IN:b0    ; BTN_IN               ; work         ;
 ;       |CONTROL:c0|         ; 10 (10)             ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|TEST:test|CONTROL:c0   ; CONTROL              ; work         ;
-;       |DB:d0|              ; 5 (5)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|TEST:test|DB:d0        ; DB                   ; work         ;
-;       |INPUT:i0|           ; 29 (29)             ; 36 (36)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|TEST:test|INPUT:i0     ; INPUT                ; work         ;
-;       |READY:r0|           ; 45 (45)             ; 37 (37)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|TEST:test|READY:r0     ; READY                ; work         ;
-;       |SEG7DEC_1:s0|       ; 23 (23)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|TEST:test|SEG7DEC_1:s0 ; SEG7DEC_1            ; work         ;
+;       |DB:d0|              ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|TEST:test|DB:d0        ; DB                   ; work         ;
+;       |INPUT:i0|           ; 39 (39)             ; 28 (28)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|TEST:test|INPUT:i0     ; INPUT                ; work         ;
+;       |READY:r0|           ; 4 (4)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|TEST:test|READY:r0     ; READY                ; work         ;
+;       |SEG7DEC_1:s0|       ; 21 (21)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|TEST:test|SEG7DEC_1:s0 ; SEG7DEC_1            ; work         ;
 ;       |SEG7DEC_1:s2|       ; 20 (20)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|TEST:test|SEG7DEC_1:s2 ; SEG7DEC_1            ; work         ;
-;       |SEG7DEC_1:s4|       ; 22 (22)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|TEST:test|SEG7DEC_1:s4 ; SEG7DEC_1            ; work         ;
-;       |SEG7DEC_2:s1|       ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|TEST:test|SEG7DEC_2:s1 ; SEG7DEC_2            ; work         ;
-;       |SEG7DEC_2:s3|       ; 13 (13)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|TEST:test|SEG7DEC_2:s3 ; SEG7DEC_2            ; work         ;
-;       |SEG7DEC_2:s5|       ; 12 (12)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|TEST:test|SEG7DEC_2:s5 ; SEG7DEC_2            ; work         ;
+;       |SEG7DEC_1:s4|       ; 20 (20)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|TEST:test|SEG7DEC_1:s4 ; SEG7DEC_1            ; work         ;
+;       |SEG7DEC_2:s1|       ; 12 (12)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|TEST:test|SEG7DEC_2:s1 ; SEG7DEC_2            ; work         ;
+;       |SEG7DEC_2:s3|       ; 11 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|TEST:test|SEG7DEC_2:s3 ; SEG7DEC_2            ; work         ;
+;       |SEG7DEC_2:s5|       ; 11 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|TEST:test|SEG7DEC_2:s5 ; SEG7DEC_2            ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -332,98 +332,103 @@ Encoding Type:  One-Hot
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+-----------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                      ;
-+------------------------------------------+----------------------------------------------+
-; Register name                            ; Reason for Removal                           ;
-+------------------------------------------+----------------------------------------------+
-; TEST:test|INPUT:i0|SEG5[0]               ; Merged with TEST:test|INPUT:i0|SEG6[0]       ;
-; TEST:test|INPUT:i0|SEG5[1]               ; Merged with TEST:test|INPUT:i0|SEG6[1]       ;
-; TEST:test|INPUT:i0|SEG5[2]               ; Merged with TEST:test|INPUT:i0|SEG6[2]       ;
-; TEST:test|INPUT:i0|SEG5[3]               ; Merged with TEST:test|INPUT:i0|SEG6[3]       ;
-; TEST:test|INPUT:i0|SEG3[0]               ; Merged with TEST:test|INPUT:i0|SEG4[0]       ;
-; TEST:test|INPUT:i0|SEG3[1]               ; Merged with TEST:test|INPUT:i0|SEG4[1]       ;
-; TEST:test|INPUT:i0|SEG3[2]               ; Merged with TEST:test|INPUT:i0|SEG4[2]       ;
-; TEST:test|INPUT:i0|SEG3[3]               ; Merged with TEST:test|INPUT:i0|SEG4[3]       ;
-; TEST:test|INPUT:i0|SEG1[0]               ; Merged with TEST:test|INPUT:i0|SEG2[0]       ;
-; TEST:test|INPUT:i0|SEG1[1]               ; Merged with TEST:test|INPUT:i0|SEG2[1]       ;
-; TEST:test|INPUT:i0|SEG1[2]               ; Merged with TEST:test|INPUT:i0|SEG2[2]       ;
-; TEST:test|INPUT:i0|SEG1[3]               ; Merged with TEST:test|INPUT:i0|SEG2[3]       ;
-; TEST:test|CONTROL:c0|STATE[3]            ; Stuck at GND due to stuck port data_in       ;
-; TEST:test|DB:d0|QUESTION[11,15,19..22]   ; Stuck at GND due to stuck port data_in       ;
-; TEST:test|INPUT:i0|QUESTION_r[0,4,8..11] ; Stuck at GND due to stuck port data_in       ;
-; TEST:test|INPUT:i0|SEG1_Q[0]             ; Stuck at GND due to stuck port data_in       ;
-; TEST:test|INPUT:i0|SEG2_Q[0]             ; Stuck at GND due to stuck port data_in       ;
-; TEST:test|INPUT:i0|SEG3_Q[0..3]          ; Stuck at GND due to stuck port data_in       ;
-; TEST:test|CONTROL:c0|STATE[2]            ; Merged with TEST:test|CONTROL:c0|STATE[1]    ;
-; TEST:test|DB:d0|QUESTION[14]             ; Merged with TEST:test|DB:d0|QUESTION[12]     ;
-; TEST:test|INPUT:i0|QUESTION_r[3]         ; Merged with TEST:test|INPUT:i0|QUESTION_r[1] ;
-; TEST:test|INPUT:i0|SEG1_Q[3]             ; Merged with TEST:test|INPUT:i0|SEG1_Q[1]     ;
-; TEST:test|CONTROL:c0|nxt~2               ; Lost fanout                                  ;
-; TEST:test|CONTROL:c0|nxt~3               ; Lost fanout                                  ;
-; TEST:test|CONTROL:c0|nxt~4               ; Lost fanout                                  ;
-; TEST:test|CONTROL:c0|nxt~5               ; Lost fanout                                  ;
-; TEST:test|CONTROL:c0|cur~11              ; Lost fanout                                  ;
-; TEST:test|CONTROL:c0|cur~12              ; Lost fanout                                  ;
-; TEST:test|CONTROL:c0|cur~13              ; Lost fanout                                  ;
-; TEST:test|CONTROL:c0|cur~14              ; Lost fanout                                  ;
-; TEST:test|CONTROL:c0|cur.WIN             ; Merged with TEST:test|CONTROL:c0|cur.GOOD    ;
-; TEST:test|CONTROL:c0|cur.WRONG           ; Merged with TEST:test|CONTROL:c0|cur.GOOD    ;
-; TEST:test|CONTROL:c0|cur.LOSE            ; Merged with TEST:test|CONTROL:c0|cur.DRAW    ;
-; TEST:test|CONTROL:c0|cur.OUCH            ; Merged with TEST:test|CONTROL:c0|cur.DRAW    ;
-; TEST:test|CONTROL:c0|nxt.WIN             ; Merged with TEST:test|CONTROL:c0|nxt.GOOD    ;
-; TEST:test|CONTROL:c0|nxt.WRONG           ; Merged with TEST:test|CONTROL:c0|nxt.GOOD    ;
-; TEST:test|CONTROL:c0|nxt.LOSE            ; Merged with TEST:test|CONTROL:c0|nxt.DRAW    ;
-; TEST:test|CONTROL:c0|nxt.OUCH            ; Merged with TEST:test|CONTROL:c0|nxt.DRAW    ;
-; TEST:test|CONTROL:c0|nxt.DRAW            ; Stuck at GND due to stuck port data_in       ;
-; TEST:test|CONTROL:c0|nxt.GOOD            ; Stuck at GND due to stuck port data_in       ;
-; TEST:test|CONTROL:c0|cur.DRAW            ; Stuck at GND due to stuck port data_in       ;
-; TEST:test|CONTROL:c0|cur.GOOD            ; Stuck at GND due to stuck port data_in       ;
-; TEST:test|CONTROL:c0|cnt[0..25]          ; Lost fanout                                  ;
-; TEST:test|CONTROL:c0|NEED_1SEC           ; Lost fanout                                  ;
-; Total Number of Removed Registers = 82   ;                                              ;
-+------------------------------------------+----------------------------------------------+
++-------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                        ;
++--------------------------------------------+----------------------------------------------+
+; Register name                              ; Reason for Removal                           ;
++--------------------------------------------+----------------------------------------------+
+; TEST:test|READY:r0|NUM[1,3]                ; Stuck at GND due to stuck port data_in       ;
+; TEST:test|INPUT:i0|SEG5[0]                 ; Merged with TEST:test|INPUT:i0|SEG6[0]       ;
+; TEST:test|INPUT:i0|SEG5[1]                 ; Merged with TEST:test|INPUT:i0|SEG6[1]       ;
+; TEST:test|INPUT:i0|SEG5[2]                 ; Merged with TEST:test|INPUT:i0|SEG6[2]       ;
+; TEST:test|INPUT:i0|SEG5[3]                 ; Merged with TEST:test|INPUT:i0|SEG6[3]       ;
+; TEST:test|INPUT:i0|SEG3[0]                 ; Merged with TEST:test|INPUT:i0|SEG4[0]       ;
+; TEST:test|INPUT:i0|SEG3[1]                 ; Merged with TEST:test|INPUT:i0|SEG4[1]       ;
+; TEST:test|INPUT:i0|SEG3[2]                 ; Merged with TEST:test|INPUT:i0|SEG4[2]       ;
+; TEST:test|INPUT:i0|SEG3[3]                 ; Merged with TEST:test|INPUT:i0|SEG4[3]       ;
+; TEST:test|INPUT:i0|SEG1[0]                 ; Merged with TEST:test|INPUT:i0|SEG2[0]       ;
+; TEST:test|INPUT:i0|SEG1[1]                 ; Merged with TEST:test|INPUT:i0|SEG2[1]       ;
+; TEST:test|INPUT:i0|SEG1[2]                 ; Merged with TEST:test|INPUT:i0|SEG2[2]       ;
+; TEST:test|INPUT:i0|SEG1[3]                 ; Merged with TEST:test|INPUT:i0|SEG2[3]       ;
+; TEST:test|READY:r0|NUM[0]                  ; Merged with TEST:test|READY:r0|NUM[2]        ;
+; TEST:test|READY:r0|OK                      ; Merged with TEST:test|READY:r0|NUM[2]        ;
+; TEST:test|CONTROL:c0|STATE[3]              ; Stuck at GND due to stuck port data_in       ;
+; TEST:test|DB:d0|QUESTION[11,15,16,19..22]  ; Stuck at GND due to stuck port data_in       ;
+; TEST:test|INPUT:i0|QUESTION_r[0,4,5,8..11] ; Stuck at GND due to stuck port data_in       ;
+; TEST:test|INPUT:i0|SEG1_Q[0]               ; Stuck at GND due to stuck port data_in       ;
+; TEST:test|INPUT:i0|SEG2_Q[0,1]             ; Stuck at GND due to stuck port data_in       ;
+; TEST:test|INPUT:i0|SEG3_Q[0..3]            ; Stuck at GND due to stuck port data_in       ;
+; TEST:test|DB:d0|QUESTION[12,14,17]         ; Stuck at GND due to stuck port data_in       ;
+; TEST:test|INPUT:i0|QUESTION_r[1,3,6]       ; Stuck at GND due to stuck port data_in       ;
+; TEST:test|INPUT:i0|SEG1_Q[1,3]             ; Stuck at GND due to stuck port data_in       ;
+; TEST:test|INPUT:i0|SEG2_Q[2]               ; Stuck at GND due to stuck port data_in       ;
+; TEST:test|CONTROL:c0|STATE[2]              ; Merged with TEST:test|CONTROL:c0|STATE[1]    ;
+; TEST:test|DB:d0|QUESTION[18]               ; Merged with TEST:test|DB:d0|QUESTION[13]     ;
+; TEST:test|INPUT:i0|QUESTION_r[7]           ; Merged with TEST:test|INPUT:i0|QUESTION_r[2] ;
+; TEST:test|INPUT:i0|SEG2_Q[3]               ; Merged with TEST:test|INPUT:i0|SEG1_Q[2]     ;
+; TEST:test|CONTROL:c0|nxt~2                 ; Lost fanout                                  ;
+; TEST:test|CONTROL:c0|nxt~3                 ; Lost fanout                                  ;
+; TEST:test|CONTROL:c0|nxt~4                 ; Lost fanout                                  ;
+; TEST:test|CONTROL:c0|nxt~5                 ; Lost fanout                                  ;
+; TEST:test|CONTROL:c0|cur~11                ; Lost fanout                                  ;
+; TEST:test|CONTROL:c0|cur~12                ; Lost fanout                                  ;
+; TEST:test|CONTROL:c0|cur~13                ; Lost fanout                                  ;
+; TEST:test|CONTROL:c0|cur~14                ; Lost fanout                                  ;
+; TEST:test|CONTROL:c0|cur.WIN               ; Merged with TEST:test|CONTROL:c0|cur.GOOD    ;
+; TEST:test|CONTROL:c0|cur.WRONG             ; Merged with TEST:test|CONTROL:c0|cur.GOOD    ;
+; TEST:test|CONTROL:c0|cur.LOSE              ; Merged with TEST:test|CONTROL:c0|cur.DRAW    ;
+; TEST:test|CONTROL:c0|cur.OUCH              ; Merged with TEST:test|CONTROL:c0|cur.DRAW    ;
+; TEST:test|CONTROL:c0|nxt.WIN               ; Merged with TEST:test|CONTROL:c0|nxt.GOOD    ;
+; TEST:test|CONTROL:c0|nxt.WRONG             ; Merged with TEST:test|CONTROL:c0|nxt.GOOD    ;
+; TEST:test|CONTROL:c0|nxt.LOSE              ; Merged with TEST:test|CONTROL:c0|nxt.DRAW    ;
+; TEST:test|CONTROL:c0|nxt.OUCH              ; Merged with TEST:test|CONTROL:c0|nxt.DRAW    ;
+; TEST:test|CONTROL:c0|nxt.DRAW              ; Stuck at GND due to stuck port data_in       ;
+; TEST:test|CONTROL:c0|nxt.GOOD              ; Stuck at GND due to stuck port data_in       ;
+; TEST:test|CONTROL:c0|cur.DRAW              ; Stuck at GND due to stuck port data_in       ;
+; TEST:test|CONTROL:c0|cur.GOOD              ; Stuck at GND due to stuck port data_in       ;
+; TEST:test|CONTROL:c0|cnt[0..25]            ; Lost fanout                                  ;
+; TEST:test|CONTROL:c0|NEED_1SEC             ; Lost fanout                                  ;
+; Total Number of Removed Registers = 98     ;                                              ;
++--------------------------------------------+----------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                             ;
-+-------------------------------+---------------------------+-------------------------------------------------------------+
-; Register name                 ; Reason for Removal        ; Registers Removed due to This Register                      ;
-+-------------------------------+---------------------------+-------------------------------------------------------------+
-; TEST:test|CONTROL:c0|nxt~2    ; Lost Fanouts              ; TEST:test|CONTROL:c0|cnt[2], TEST:test|CONTROL:c0|cnt[1],   ;
-;                               ;                           ; TEST:test|CONTROL:c0|cnt[0], TEST:test|CONTROL:c0|cnt[4],   ;
-;                               ;                           ; TEST:test|CONTROL:c0|cnt[6], TEST:test|CONTROL:c0|cnt[8],   ;
-;                               ;                           ; TEST:test|CONTROL:c0|cnt[10], TEST:test|CONTROL:c0|cnt[12], ;
-;                               ;                           ; TEST:test|CONTROL:c0|cnt[14], TEST:test|CONTROL:c0|cnt[16], ;
-;                               ;                           ; TEST:test|CONTROL:c0|cnt[18], TEST:test|CONTROL:c0|cnt[20], ;
-;                               ;                           ; TEST:test|CONTROL:c0|cnt[22], TEST:test|CONTROL:c0|cnt[24], ;
-;                               ;                           ; TEST:test|CONTROL:c0|NEED_1SEC                              ;
-; TEST:test|CONTROL:c0|nxt~3    ; Lost Fanouts              ; TEST:test|CONTROL:c0|cnt[3], TEST:test|CONTROL:c0|cnt[5],   ;
-;                               ;                           ; TEST:test|CONTROL:c0|cnt[7], TEST:test|CONTROL:c0|cnt[9],   ;
-;                               ;                           ; TEST:test|CONTROL:c0|cnt[11], TEST:test|CONTROL:c0|cnt[13], ;
-;                               ;                           ; TEST:test|CONTROL:c0|cnt[15], TEST:test|CONTROL:c0|cnt[17], ;
-;                               ;                           ; TEST:test|CONTROL:c0|cnt[19], TEST:test|CONTROL:c0|cnt[21], ;
-;                               ;                           ; TEST:test|CONTROL:c0|cnt[23], TEST:test|CONTROL:c0|cnt[25]  ;
-; TEST:test|CONTROL:c0|STATE[3] ; Stuck at GND              ; TEST:test|INPUT:i0|SEG1_Q[0], TEST:test|INPUT:i0|SEG2_Q[0], ;
-;                               ; due to stuck port data_in ; TEST:test|INPUT:i0|SEG3_Q[3], TEST:test|INPUT:i0|SEG3_Q[2], ;
-;                               ;                           ; TEST:test|INPUT:i0|SEG3_Q[1], TEST:test|INPUT:i0|SEG3_Q[0]  ;
-; TEST:test|DB:d0|QUESTION[11]  ; Stuck at GND              ; TEST:test|INPUT:i0|QUESTION_r[0]                            ;
-;                               ; due to stuck port data_in ;                                                             ;
-; TEST:test|DB:d0|QUESTION[15]  ; Stuck at GND              ; TEST:test|INPUT:i0|QUESTION_r[4]                            ;
-;                               ; due to stuck port data_in ;                                                             ;
-; TEST:test|DB:d0|QUESTION[19]  ; Stuck at GND              ; TEST:test|INPUT:i0|QUESTION_r[8]                            ;
-;                               ; due to stuck port data_in ;                                                             ;
-; TEST:test|DB:d0|QUESTION[20]  ; Stuck at GND              ; TEST:test|INPUT:i0|QUESTION_r[9]                            ;
-;                               ; due to stuck port data_in ;                                                             ;
-; TEST:test|DB:d0|QUESTION[21]  ; Stuck at GND              ; TEST:test|INPUT:i0|QUESTION_r[10]                           ;
-;                               ; due to stuck port data_in ;                                                             ;
-; TEST:test|DB:d0|QUESTION[22]  ; Stuck at GND              ; TEST:test|INPUT:i0|QUESTION_r[11]                           ;
-;                               ; due to stuck port data_in ;                                                             ;
-; TEST:test|CONTROL:c0|nxt.DRAW ; Stuck at GND              ; TEST:test|CONTROL:c0|cur.DRAW                               ;
-;                               ; due to stuck port data_in ;                                                             ;
-; TEST:test|CONTROL:c0|nxt.GOOD ; Stuck at GND              ; TEST:test|CONTROL:c0|cur.GOOD                               ;
-;                               ; due to stuck port data_in ;                                                             ;
-+-------------------------------+---------------------------+-------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                      ;
++-------------------------------+---------------------------+----------------------------------------------------------------------+
+; Register name                 ; Reason for Removal        ; Registers Removed due to This Register                               ;
++-------------------------------+---------------------------+----------------------------------------------------------------------+
+; TEST:test|CONTROL:c0|STATE[3] ; Stuck at GND              ; TEST:test|INPUT:i0|QUESTION_r[0], TEST:test|INPUT:i0|QUESTION_r[4],  ;
+;                               ; due to stuck port data_in ; TEST:test|INPUT:i0|QUESTION_r[5], TEST:test|INPUT:i0|QUESTION_r[8],  ;
+;                               ;                           ; TEST:test|INPUT:i0|QUESTION_r[9], TEST:test|INPUT:i0|QUESTION_r[10], ;
+;                               ;                           ; TEST:test|INPUT:i0|QUESTION_r[11], TEST:test|INPUT:i0|SEG1_Q[0],     ;
+;                               ;                           ; TEST:test|INPUT:i0|SEG2_Q[1], TEST:test|INPUT:i0|SEG2_Q[0],          ;
+;                               ;                           ; TEST:test|INPUT:i0|SEG3_Q[3], TEST:test|INPUT:i0|SEG3_Q[2],          ;
+;                               ;                           ; TEST:test|INPUT:i0|SEG3_Q[1], TEST:test|INPUT:i0|SEG3_Q[0],          ;
+;                               ;                           ; TEST:test|INPUT:i0|QUESTION_r[1], TEST:test|INPUT:i0|QUESTION_r[3],  ;
+;                               ;                           ; TEST:test|INPUT:i0|QUESTION_r[6], TEST:test|INPUT:i0|SEG1_Q[3],      ;
+;                               ;                           ; TEST:test|INPUT:i0|SEG1_Q[1], TEST:test|INPUT:i0|SEG2_Q[2]           ;
+; TEST:test|CONTROL:c0|nxt~2    ; Lost Fanouts              ; TEST:test|CONTROL:c0|cnt[2], TEST:test|CONTROL:c0|cnt[1],            ;
+;                               ;                           ; TEST:test|CONTROL:c0|cnt[0], TEST:test|CONTROL:c0|cnt[4],            ;
+;                               ;                           ; TEST:test|CONTROL:c0|cnt[6], TEST:test|CONTROL:c0|cnt[8],            ;
+;                               ;                           ; TEST:test|CONTROL:c0|cnt[10], TEST:test|CONTROL:c0|cnt[12],          ;
+;                               ;                           ; TEST:test|CONTROL:c0|cnt[14], TEST:test|CONTROL:c0|cnt[16],          ;
+;                               ;                           ; TEST:test|CONTROL:c0|cnt[18], TEST:test|CONTROL:c0|cnt[20],          ;
+;                               ;                           ; TEST:test|CONTROL:c0|cnt[22], TEST:test|CONTROL:c0|cnt[24],          ;
+;                               ;                           ; TEST:test|CONTROL:c0|NEED_1SEC                                       ;
+; TEST:test|CONTROL:c0|nxt~3    ; Lost Fanouts              ; TEST:test|CONTROL:c0|cnt[3], TEST:test|CONTROL:c0|cnt[5],            ;
+;                               ;                           ; TEST:test|CONTROL:c0|cnt[7], TEST:test|CONTROL:c0|cnt[9],            ;
+;                               ;                           ; TEST:test|CONTROL:c0|cnt[11], TEST:test|CONTROL:c0|cnt[13],          ;
+;                               ;                           ; TEST:test|CONTROL:c0|cnt[15], TEST:test|CONTROL:c0|cnt[17],          ;
+;                               ;                           ; TEST:test|CONTROL:c0|cnt[19], TEST:test|CONTROL:c0|cnt[21],          ;
+;                               ;                           ; TEST:test|CONTROL:c0|cnt[23], TEST:test|CONTROL:c0|cnt[25]           ;
+; TEST:test|READY:r0|NUM[1]     ; Stuck at GND              ; TEST:test|DB:d0|QUESTION[11], TEST:test|DB:d0|QUESTION[15],          ;
+;                               ; due to stuck port data_in ; TEST:test|DB:d0|QUESTION[16], TEST:test|DB:d0|QUESTION[12],          ;
+;                               ;                           ; TEST:test|DB:d0|QUESTION[14]                                         ;
+; TEST:test|CONTROL:c0|nxt.DRAW ; Stuck at GND              ; TEST:test|CONTROL:c0|cur.DRAW                                        ;
+;                               ; due to stuck port data_in ;                                                                      ;
+; TEST:test|CONTROL:c0|nxt.GOOD ; Stuck at GND              ; TEST:test|CONTROL:c0|cur.GOOD                                        ;
+;                               ; due to stuck port data_in ;                                                                      ;
++-------------------------------+---------------------------+----------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -431,12 +436,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 127   ;
-; Number of registers using Synchronous Clear  ; 53    ;
+; Total registers                              ; 81    ;
+; Number of registers using Synchronous Clear  ; 27    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 46    ;
+; Number of registers using Clock Enable       ; 26    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -446,16 +451,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |DE10_LITE_Golden_Top|TEST:test|INPUT:i0|SEG4[2]    ;
-; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |DE10_LITE_Golden_Top|TEST:test|CONTROL:c0|cnt[6]   ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |DE10_LITE_Golden_Top|TEST:test|BTN_IN:b0|ff2[0]    ;
-; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |DE10_LITE_Golden_Top|TEST:test|BTN_IN:b0|cnt[17]   ;
-; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |DE10_LITE_Golden_Top|TEST:test|READY:r0|cnt[18]    ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |DE10_LITE_Golden_Top|TEST:test|CONTROL:c0|cnt[18]  ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |DE10_LITE_Golden_Top|TEST:test|BTN_IN:b0|ff2[1]    ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |DE10_LITE_Golden_Top|TEST:test|BTN_IN:b0|cnt[6]    ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|TEST:test|CONTROL:c0|STATE[1] ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|TEST:test|INPUT:i0|COUNT3[3]  ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|TEST:test|INPUT:i0|COUNT2[2]  ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|TEST:test|INPUT:i0|COUNT1[0]  ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|TEST:test|READY:r0|sec[2]     ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|TEST:test|INPUT:i0|COUNT1[0]  ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|TEST:test|INPUT:i0|COUNT3[3]  ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|TEST:test|INPUT:i0|COUNT2[1]  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 
 
@@ -503,23 +505,23 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 185                         ;
-; cycloneiii_ff         ; 127                         ;
-;     ENA               ; 46                          ;
-;     SCLR              ; 53                          ;
+; cycloneiii_ff         ; 81                          ;
+;     ENA               ; 26                          ;
+;     SCLR              ; 27                          ;
 ;     plain             ; 28                          ;
 ; cycloneiii_io_obuf    ; 71                          ;
-; cycloneiii_lcell_comb ; 244                         ;
-;     arith             ; 45                          ;
-;         2 data inputs ; 45                          ;
-;     normal            ; 199                         ;
+; cycloneiii_lcell_comb ; 196                         ;
+;     arith             ; 20                          ;
+;         2 data inputs ; 20                          ;
+;     normal            ; 176                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 24                          ;
-;         3 data inputs ; 39                          ;
-;         4 data inputs ; 133                         ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 23                          ;
+;         3 data inputs ; 49                          ;
+;         4 data inputs ; 102                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.09                        ;
+; Average LUT depth     ; 1.92                        ;
 +-----------------------+-----------------------------+
 
 
@@ -538,7 +540,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
-    Info: Processing started: Tue Nov 28 22:46:46 2023
+    Info: Processing started: Wed Nov 29 20:48:55 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 1PTEST -c 1PTEST
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -598,9 +600,9 @@ Warning (10030): Net "Q_table.waddr_a" at DB.v(15) has no driver or initial valu
 Warning (10030): Net "Q_table.we_a" at DB.v(15) has no driver or initial value, using a default initial value '0' File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/DB.v Line: 15
 Info (12128): Elaborating entity "INPUT" for hierarchy "TEST:test|INPUT:i0" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/test.v Line: 36
 Warning (10230): Verilog HDL assignment warning at INPUT.v(111): truncated value with size 13 to match size of target (12) File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/INPUT.v Line: 111
-Warning (10230): Verilog HDL assignment warning at INPUT.v(182): truncated value with size 32 to match size of target (4) File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/INPUT.v Line: 182
-Warning (10230): Verilog HDL assignment warning at INPUT.v(188): truncated value with size 32 to match size of target (4) File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/INPUT.v Line: 188
-Warning (10230): Verilog HDL assignment warning at INPUT.v(194): truncated value with size 32 to match size of target (4) File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/INPUT.v Line: 194
+Warning (10230): Verilog HDL assignment warning at INPUT.v(222): truncated value with size 32 to match size of target (4) File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/INPUT.v Line: 222
+Warning (10230): Verilog HDL assignment warning at INPUT.v(228): truncated value with size 32 to match size of target (4) File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/INPUT.v Line: 228
+Warning (10230): Verilog HDL assignment warning at INPUT.v(234): truncated value with size 32 to match size of target (4) File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/INPUT.v Line: 234
 Warning (12125): Using design file seg7dec_1.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: SEG7DEC_1 File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/seg7dec_1.v Line: 1
 Info (12128): Elaborating entity "SEG7DEC_1" for hierarchy "TEST:test|SEG7DEC_1:s0" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/test.v Line: 38
@@ -700,8 +702,10 @@ Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "GPIO[34]" has no driver File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/DE10_LITE_Golden_Top.v Line: 122
     Warning (13040): bidirectional pin "GPIO[35]" has no driver File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/DE10_LITE_Golden_Top.v Line: 122
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "TEST:test|SEG7DEC_2:s1|nHEX[3]" merged with LATCH primitive "TEST:test|SEG7DEC_2:s1|nHEX[0]" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/seg7dec_2.v Line: 55
     Info (13026): Duplicate LATCH primitive "TEST:test|SEG7DEC_2:s1|nHEX[4]" merged with LATCH primitive "TEST:test|SEG7DEC_2:s1|nHEX[0]" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/seg7dec_2.v Line: 55
+    Info (13026): Duplicate LATCH primitive "TEST:test|SEG7DEC_2:s1|nHEX[3]" merged with LATCH primitive "TEST:test|SEG7DEC_2:s1|nHEX[0]" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/seg7dec_2.v Line: 55
+    Info (13026): Duplicate LATCH primitive "TEST:test|SEG7DEC_2:s5|nHEX[5]" merged with LATCH primitive "TEST:test|SEG7DEC_2:s1|nHEX[5]" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/seg7dec_2.v Line: 55
+    Info (13026): Duplicate LATCH primitive "TEST:test|SEG7DEC_2:s3|nHEX[5]" merged with LATCH primitive "TEST:test|SEG7DEC_2:s1|nHEX[5]" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/seg7dec_2.v Line: 55
     Info (13026): Duplicate LATCH primitive "TEST:test|SEG7DEC_2:s3|nHEX[3]" merged with LATCH primitive "TEST:test|SEG7DEC_2:s3|nHEX[0]" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/seg7dec_2.v Line: 55
     Info (13026): Duplicate LATCH primitive "TEST:test|SEG7DEC_2:s3|nHEX[4]" merged with LATCH primitive "TEST:test|SEG7DEC_2:s3|nHEX[0]" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/seg7dec_2.v Line: 55
     Info (13026): Duplicate LATCH primitive "TEST:test|SEG7DEC_2:s5|nHEX[4]" merged with LATCH primitive "TEST:test|SEG7DEC_2:s5|nHEX[0]" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/seg7dec_2.v Line: 55
@@ -772,9 +776,6 @@ Warning (13012): Latch TEST:test|SEG7DEC_2:s3|nHEX[1] has unsafe behavior File: 
 Warning (13012): Latch TEST:test|SEG7DEC_2:s3|nHEX[2] has unsafe behavior File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/seg7dec_2.v Line: 55
     Warning (13013): Ports D and ENA on the latch are fed by the same signal TEST:test|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/CONTROL.v Line: 107
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal TEST:test|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/CONTROL.v Line: 107
-Warning (13012): Latch TEST:test|SEG7DEC_2:s3|nHEX[5] has unsafe behavior File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/seg7dec_2.v Line: 55
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal TEST:test|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/CONTROL.v Line: 107
-    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal TEST:test|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/CONTROL.v Line: 107
 Warning (13012): Latch TEST:test|SEG7DEC_2:s3|nHEX[6] has unsafe behavior File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/seg7dec_2.v Line: 55
     Warning (13013): Ports D and ENA on the latch are fed by the same signal TEST:test|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/CONTROL.v Line: 107
     Warning (13013): Ports ENA and PRE on the latch are fed by the same signal TEST:test|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/CONTROL.v Line: 107
@@ -808,9 +809,6 @@ Warning (13012): Latch TEST:test|SEG7DEC_2:s5|nHEX[1] has unsafe behavior File: 
 Warning (13012): Latch TEST:test|SEG7DEC_2:s5|nHEX[2] has unsafe behavior File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/seg7dec_2.v Line: 55
     Warning (13013): Ports D and ENA on the latch are fed by the same signal TEST:test|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/CONTROL.v Line: 107
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal TEST:test|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/CONTROL.v Line: 107
-Warning (13012): Latch TEST:test|SEG7DEC_2:s5|nHEX[5] has unsafe behavior File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/seg7dec_2.v Line: 55
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal TEST:test|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/CONTROL.v Line: 107
-    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal TEST:test|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/CONTROL.v Line: 107
 Warning (13012): Latch TEST:test|SEG7DEC_2:s5|nHEX[6] has unsafe behavior File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/seg7dec_2.v Line: 55
     Warning (13013): Ports D and ENA on the latch are fed by the same signal TEST:test|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/CONTROL.v Line: 107
     Warning (13013): Ports ENA and PRE on the latch are fed by the same signal TEST:test|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/CONTROL.v Line: 107
@@ -883,14 +881,14 @@ Warning (21074): Design contains 9 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/DE10_LITE_Golden_Top.v Line: 91
     Warning (15610): No output dependent on input pin "GSENSOR_INT[1]" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/DE10_LITE_Golden_Top.v Line: 106
     Warning (15610): No output dependent on input pin "GSENSOR_INT[2]" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST/DE10_LITE_Golden_Top.v Line: 106
-Info (21057): Implemented 459 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 388 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 17 input pins
     Info (21059): Implemented 97 output pins
     Info (21060): Implemented 71 bidirectional pins
-    Info (21061): Implemented 274 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 284 warnings
-    Info: Peak virtual memory: 4812 megabytes
-    Info: Processing ended: Tue Nov 28 22:47:07 2023
+    Info (21061): Implemented 203 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 278 warnings
+    Info: Peak virtual memory: 4811 megabytes
+    Info: Processing ended: Wed Nov 29 20:49:16 2023
     Info: Elapsed time: 00:00:21
     Info: Total CPU time (on all processors): 00:00:16
 

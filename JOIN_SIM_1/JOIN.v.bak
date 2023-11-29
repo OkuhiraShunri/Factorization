@@ -1,0 +1,18 @@
+module JOIN(
+    input CLK, RST, READY, QUE, WRONG, QUE_OK,
+    input [1:0] JUDG, HP,
+    output [23:0] QUESTION
+);
+
+
+
+wire ready, ok;
+wire [3:0] num;
+wire [3:0] state;
+//wire [23:0] 
+CONTROL c0(.CLK(CLK), .RST(RST), .READY_IN(READY), .QUE_IN(QUE), .WRONG_IN(WRONG), .JUDG_IN(JUDG), .HP_IN(HP),
+           .QUE(QUE_OK), .OK_IN(ok), .READY_OUT(ready), .STATE(state));
+
+READY r0(.CLK(CLK), .RST(RST), .OK(ok), .STATE(state), .NUM(num), .READY_1P(ready));
+
+DB d0(.CLK(CLK), .NUM_IN(num), .QUESTION(QUESTION)); 

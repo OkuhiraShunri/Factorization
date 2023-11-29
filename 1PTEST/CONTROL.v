@@ -1,10 +1,10 @@
 module CONTROL(
     //input [2:0] SEL,
     //input CLK, RST, DEC, CLR_IN, QUE_IN, READY_IN,
-    input CLK, RST, READY_IN, QUE_IN, 
+    input CLK, RST, READY_IN, QUE_IN, //QUE_INはチャタリング除去モジュールから受け取る信号
     input OK_IN, //二人ともスタート押して、READYモジュールからその信号を受け取る。
     input [1:0] HP_IN,//00は無入力,01は自分の勝ち,10は相手の勝ち
-    input QUE,//入力側に問題が入ってれば値は1、入ってなければ0
+    input QUE,//入力側に問題が入ってれば値は1、入ってなければ0　QUEは入力モジュールから受け取る信号
     input [1:0] JUDG_IN,  //勝利判定結果の信号受取
     input WRONG_IN, //回答を間違えたときの信号受取
     output reg READY_OUT,
