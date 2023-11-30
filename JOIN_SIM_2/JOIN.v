@@ -1,0 +1,29 @@
+module JOIN(
+    input CLK, RST, READY, QUE, WRONG, DEC, CLR,
+    input [1:0] JUDG, HP,
+    input [2:0] SEL,
+    output [3:0] SEG1, SEG2, SEG3, SEG4, SEG5, SEG6, SEG1_Q, SEG2_Q, SEG3_Q, COUNT1_OUT, COUNT2_OUT, COUNT3_OUT,
+    output LED
+);
+
+
+
+wire ready, ok, q_ok;
+wire [3:0] num;
+wire [3:0] state;
+wire [23:0] question;
+ 
+CONTROL c0(.CLK(CLK), .RST(RST), .READY_IN(READY), .QUE_IN(QUE), .WRONG_IN(WRONG), .JUDG_IN(JUDG), .HP_IN(HP),
+           .QUE(q_ok), .OK_IN(ok), .READY_OUT(ready), .STATE(state));
+
+READY r0(.CLK(CLK), .RST(RST), .OK(ok), .STATE(state), .NUM(num), .READY_1P(ready));
+
+DB d0(.CLK(CLK), .NUM_IN(num), .QUESTION(question)); 
+
+
+INPUT i0(.CLK(CLK), .RST(RST), .QUESTION(question), .STATE(state), .SEL(SEL), .DEC(DEC), .CLR(CLR), .SEG1(SEG1), .SEG2(SEG2), .SEG3(SEG3),
+         .SEG4(SEG4), .SEG5(SEG5), .SEG6(SEG6), .SEG1_Q(SEG1_Q), .SEG2_Q(SEG2_Q), .SEG3_Q(SEG3_Q), 
+         .COUNT1_OUT(COUNT1_OUT), .COUNT2_OUT(COUNT2_OUT), .COUNT3_OUT(COUNT3_OUT), .QUE_OK(q_ok), .LED(LED)
+	);
+
+endmodule

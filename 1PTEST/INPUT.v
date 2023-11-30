@@ -103,14 +103,24 @@ initial begin
   QUESTION_r <= 12'b0;//初期値はゼロで空っぽ
 end
 
+// always @(posedge CLK)begin
+//   if(STATE == 4'b0110 || STATE == 4'b1000 || STATE == 4'b1001 || STATE == 4'b1010 || STATE == 4'b1011)begin//DRAW,OUCH,GOOD,WIN,LOSEのとき、
+//     QUESTION_r <= 12'b0;
+//   end
+//   else begin
+//     QUESTION_r <= QUESTION[23:11];//DBから受け取った問題セットから、難易度と問題だけを切り取り、保存しておく
+//   end
+// end
+
 always @(posedge CLK)begin
-  if(STATE == 4'b0110 || STATE == 4'b1000 || STATE == 4'b1001 || STATE == 4'b1010 || STATE == 4'b1011)begin//DRAW,OUCH,GOOD,WIN,LOSEのとき、
-    QUESTION_r <= 12'b0;
+  if((STATE == 4'b0010 && QUESTION != 24'b0)|| STATE == 4'b0011 || STATE == 4'b0100 || STATE == 4'b0111)begin//READY, QUESTION, INPUT, WRONG
+    QUESTION_r <= QUESTION[23:11];
   end
   else begin
-    QUESTION_r <= QUESTION[23:11];//DBから受け取った問題セットから、難易度と問題だけを切り取り、保存しておく
+    QUESTION_r <= 12'b0;
   end
 end
+
 
 always @(posedge CLK)begin
   if(QUESTION_r == 12'b0)begin

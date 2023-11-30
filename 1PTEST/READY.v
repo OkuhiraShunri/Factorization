@@ -29,7 +29,7 @@ end
 always @(posedge CLK)begin
   if(READY_1P)   //制御部から1発のパルスが来たらずっとkeep_1が1を保持しておく
     keep_1 <= 1;
-    else if(STATE == 2'b0110 || STATE == 2'b1000 || STATE == 2'b1001 || STATE == 2'b1010 || STATE == 2'b1011) //順番にSTATEは、DRAW,GOOD,OUCH,WIN,LOSEをあらわす
+    else if(STATE == 4'b0110 || STATE == 4'b1000 || STATE == 4'b1001 || STATE == 4'b1010 || STATE == 4'b1011) //順番にSTATEは、DRAW,GOOD,OUCH,WIN,LOSEをあらわす
     keep_1 <= 0;
     else
     keep_1 <= keep_1;
