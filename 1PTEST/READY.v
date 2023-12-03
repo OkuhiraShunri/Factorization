@@ -44,37 +44,49 @@ end
 
 
 
-// reg [25:0] cnt;
-// wire en1hz = (cnt == 26'd49_999_99);
-// always @(posedge CLK)begin
-//   if(RST)
-//     cnt <= 26'b0;
-//   else if(en1hz)
-//     cnt <= 26'b0;
-//   else
-//     cnt <= cnt + 26'b1;//このカウントはクロックに同期してインクリメントされる
-// end//10進カウンタ
+reg [25:0] cnt;
+wire en1hz = (cnt == 26'd49_999_99);
+always @(posedge CLK)begin
+  if(RST)
+    cnt <= 26'b0;
+  else if(en1hz)
+    cnt <= 26'b0;
+  else
+    cnt <= cnt + 26'b1;//このカウントはクロックに同期してインクリメントされる
+end//10進カウンタ
 
-// reg [3:0] sec;
-// always @(posedge CLK)begin
-//   if(RST)
-//     sec <= 4'h0;
-//   else if(en1hz)
-//     if(sec == 4'h9)
-//       sec <= 4'h0;
-//     else
-//       sec <= sec + 4'h1;    //secはen1hzに同期してインクリメントされる. secは内部で常に可動しているタイマーみたいなもの
+reg [3:0] sec;
+always @(posedge CLK)begin
+  if(RST)
+    sec <= 4'h0;
+  else if(en1hz)
+    if(sec == 4'h9)
+      sec <= 4'h0;
+    else if(run_in != 1)//二人押していないときに限り、タイマーを回す
+      sec <= sec + 4'h1;    //secはen1hzに同期してインクリメントされる. secは内部で常に可動しているタイマーみたいなもの
+end
+
+
+// reg [3:0] sec_r;
+// initial begin
+//   sec_r <= 4'b0;
+// end
+// always @(posedge CLK) begin
+//   if(run_in)begin
+//     sec_r <= sec;
+//   end
+  
 // end
 
 
 always @(posedge CLK)begin
   if(run_in)begin
-    NUM <= 4'd5;
-    //NUM <= sec;//DBに渡すアウトプット
+    //NUM <= 4'd5;
+    NUM <= sec + 1;//DBに渡すアウトプット  secの範囲は1から10まで +1したのはsecがゼロだと都合が悪いため
     OK <= 1;//制御部に渡すアウトプット
   end
   else begin
-    NUM <= 4'b0;
+    NUM <= 4'b0;//二人押していない間(run_in != 1)のときはNUMにはこのゼロが常に出力されている。下のOKも同様。
     OK <= 0;
   end
 end

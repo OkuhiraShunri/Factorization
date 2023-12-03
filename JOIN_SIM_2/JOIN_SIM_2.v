@@ -62,6 +62,7 @@ initial begin
 
 
 #20 redy = 1;
+#40 que = 1; //Switch to "INPUT"
 
 end
 

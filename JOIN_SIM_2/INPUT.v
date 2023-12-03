@@ -48,7 +48,7 @@ end*/
 
 always @(posedge CLK)begin
   if((STATE == 4'b0010 && QUESTION != 24'b0)|| STATE == 4'b0011 || STATE == 4'b0100 || STATE == 4'b0111)begin//READY, QUESTION, INPUT, WRONG
-    QUESTION_r <= QUESTION[23:11];
+    QUESTION_r <= QUESTION[23:12];
   end
   else begin
     QUESTION_r <= 12'b0;

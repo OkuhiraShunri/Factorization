@@ -61,7 +61,7 @@ initial begin
   clr = 0;
 
 
-#20 redy = 1;//1Pがボタンを押す
+#20 redy = 1;
 
 end
 
