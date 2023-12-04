@@ -64,7 +64,7 @@ always @* begin
             4'h7:	nHEX = 7'b1011000;
             4'h8:	nHEX = 7'b0000000;
             4'h9:	nHEX = 7'b0010000;
-            default:nHEX = 7'b1111111;
+            default:nHEX = 7'b1111110;
         endcase
         //nHEX = 7'b0000000;
     end
@@ -80,7 +80,7 @@ always @* begin
             4'h7:	nHEX = 7'b1011000;//7
             4'h8:	nHEX = 7'b0010000;//9
             4'h9:	nHEX = 7'b0110000;//3
-            default:nHEX = 7'b1111111;//光ってない
+            default:nHEX = 7'b1111011;//光ってない
         endcase
     end
     //else nHEX = 7'b1111111;

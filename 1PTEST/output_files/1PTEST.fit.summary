@@ -1,11 +1,11 @@
-Fitter Status : Successful - Sun Dec 03 20:09:55 2023
+Fitter Status : Successful - Mon Dec 04 18:38:00 2023
 Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Standard Edition
 Revision Name : 1PTEST
 Top-level Entity Name : DE10_LITE_Golden_Top
 Family : MAX 10
 Device : 10M50DAF484C6GES
 Timing Models : Preliminary
-Total logic elements : 333 / 49,760 ( < 1 % )
+Total logic elements : 334 / 49,760 ( < 1 % )
     Total combinational functions : 323 / 49,760 ( < 1 % )
     Dedicated logic registers : 144 / 49,760 ( < 1 % )
 Total registers : 145
