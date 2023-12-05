@@ -2,7 +2,8 @@ module MANAGE_HP(
 input CLK,RST,
 input [2:0] HP_IN,  //win_loseのoutput 00 無入力　01 自分勝ち 10　相手勝ち　11　ドロー
 input [35:0] DB_IN, //DBから数列を取得
-output reg [2:0] RESULT// 00 無出力　01 相手HP0 (自分の勝ち)   10　自分のHP0 (相手の勝ち) 　
+output reg [2:0] RESULT,// 00 無出力　01 相手HP0 (自分の勝ち)   10　自分のHP0 (相手の勝ち) 　
+output reg [3:0] HP_OUT //HPをoutputするレジスタ
 );
 
 reg [3:0]MY_HP; 
@@ -35,6 +36,7 @@ always @( posedge CLK)begin //HPを減らしていく
      else if(HP_IN = 2'b10) //相手が先に正解
         MY_HP <= MY_HP - LEVEL;
      end
+     HP_OUT <= MY_HP; //自分のHPをoutput
  end
 
 always @( posedge CLK)begin  //最終的にHPが0になった時
