@@ -102,19 +102,33 @@ end
 
 reg [25:0] cnt;
 wire EN1HZ = (cnt==26'd49_999_999);
-initial begin
-    cnt <= 0;
-end
+// initial begin
+//     cnt <= 0;
+// end
 
+// always @(posedge CLK)begin
+//     if(RST)
+//       cnt <= 26'b0;
+//     //else if(EN1HZ || NEED_1SEC == 0)
+//     else if(EN1HZ)
+//       cnt <= 26'b0;
+//      else if(NEED_1SEC != 1)
+//        //cnt <= cnt + 26'b1;
+//        cnt <= cnt ;
+//     else 
+//       cnt <= cnt + 26'b1;   
+// 
 always @(posedge CLK)begin
     if(RST)
       cnt <= 26'b0;
     else if(EN1HZ || NEED_1SEC == 0)
+    //else if(EN1HZ)
       cnt <= 26'b0;
     else if(NEED_1SEC == 1)
-      cnt <= cnt + 26'b1; 
+       cnt <= cnt + 26'b1;
+       //cnt <= cnt ;
     else 
-      cnt <= cnt;   
+      cnt <= 26'b0;  
 end
 
 
@@ -147,13 +161,13 @@ always @(posedge CLK)begin
         INPUT: 
                 if(R == 0 && QUE)
                     nxt <= QUESTION;
-                else if(WRONG_IN == 11)
+                else if(WRONG_IN == 2'b11)
                     nxt <= WRONG;
-                else if(JUDG_IN == 01)
+                else if(JUDG_IN == 2'b01)
                     nxt <= GOOD;
-                else if(JUDG_IN == 10)
+                else if(JUDG_IN == 2'b10)
                     nxt <= OUCH;
-                else if(JUDG_IN == 11)
+                else if(JUDG_IN == 2'b11)
                     nxt <= DRAW;
                 else
                     nxt <= INPUT;

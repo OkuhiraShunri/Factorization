@@ -1,0 +1,15 @@
+C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_2/CONTROL.v {1 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_2/CONTROL.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module CONTROL
+
+Top level modules:
+	CONTROL
+
+} {} {}} C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_2/CONTROL_SIM.v {1 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_2/CONTROL_SIM.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module CONTROL_SIM
+
+Top level modules:
+	CONTROL_SIM
+
+} {} {}}

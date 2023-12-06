@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 1PTEST_4
-Wed Dec 06 15:15:23 2023
+Wed Dec 06 19:07:35 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
 
 
@@ -50,15 +50,15 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Dec 06 15:15:23 2023           ;
+; Analysis & Synthesis Status        ; Successful - Wed Dec 06 19:07:35 2023           ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
 ; Revision Name                      ; 1PTEST_4                                        ;
 ; Top-level Entity Name              ; DE10_LITE_Golden_Top                            ;
 ; Family                             ; MAX 10                                          ;
-; Total logic elements               ; 454                                             ;
-;     Total combinational functions  ; 411                                             ;
-;     Dedicated logic registers      ; 226                                             ;
-; Total registers                    ; 226                                             ;
+; Total logic elements               ; 459                                             ;
+;     Total combinational functions  ; 417                                             ;
+;     Dedicated logic registers      ; 227                                             ;
+; Total registers                    ; 227                                             ;
 ; Total pins                         ; 185                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -196,20 +196,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------------+
 ; Resource                                    ; Usage               ;
 +---------------------------------------------+---------------------+
-; Estimated Total logic elements              ; 454                 ;
+; Estimated Total logic elements              ; 459                 ;
 ;                                             ;                     ;
-; Total combinational functions               ; 411                 ;
+; Total combinational functions               ; 417                 ;
 ; Logic element usage by number of LUT inputs ;                     ;
-;     -- 4 input functions                    ; 220                 ;
-;     -- 3 input functions                    ; 53                  ;
-;     -- <=2 input functions                  ; 138                 ;
+;     -- 4 input functions                    ; 224                 ;
+;     -- 3 input functions                    ; 51                  ;
+;     -- <=2 input functions                  ; 142                 ;
 ;                                             ;                     ;
 ; Logic elements by mode                      ;                     ;
-;     -- normal mode                          ; 341                 ;
+;     -- normal mode                          ; 347                 ;
 ;     -- arithmetic mode                      ; 70                  ;
 ;                                             ;                     ;
-; Total registers                             ; 226                 ;
-;     -- Dedicated logic registers            ; 226                 ;
+; Total registers                             ; 227                 ;
+;     -- Dedicated logic registers            ; 227                 ;
 ;     -- I/O registers                        ; 0                   ;
 ;                                             ;                     ;
 ; I/O pins                                    ; 185                 ;
@@ -217,9 +217,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0                   ;
 ;                                             ;                     ;
 ; Maximum fan-out node                        ; MAX10_CLK1_50~input ;
-; Maximum fan-out                             ; 226                 ;
-; Total fan-out                               ; 2188                ;
-; Average fan-out                             ; 2.03                ;
+; Maximum fan-out                             ; 227                 ;
+; Total fan-out                               ; 2208                ;
+; Average fan-out                             ; 2.04                ;
 +---------------------------------------------+---------------------+
 
 
@@ -228,11 +228,11 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                       ; Entity Name          ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------+----------------------+--------------+
-; |DE10_LITE_Golden_Top      ; 411 (0)             ; 226 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 185  ; 0            ; 0          ; |DE10_LITE_Golden_Top                     ; DE10_LITE_Golden_Top ; work         ;
-;    |JOIN:j|                ; 411 (0)             ; 226 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j              ; JOIN                 ; work         ;
+; |DE10_LITE_Golden_Top      ; 417 (0)             ; 227 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 185  ; 0            ; 0          ; |DE10_LITE_Golden_Top                     ; DE10_LITE_Golden_Top ; work         ;
+;    |JOIN:j|                ; 417 (0)             ; 227 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j              ; JOIN                 ; work         ;
 ;       |BTN_IN:b0|          ; 50 (50)             ; 42 (42)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|BTN_IN:b0    ; BTN_IN               ; work         ;
-;       |CHECK:ch0|          ; 11 (11)             ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|CHECK:ch0    ; CHECK                ; work         ;
-;       |CONTROL:c0|         ; 55 (55)             ; 47 (47)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|CONTROL:c0   ; CONTROL              ; work         ;
+;       |CHECK:ch0|          ; 12 (12)             ; 24 (24)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|CHECK:ch0    ; CHECK                ; work         ;
+;       |CONTROL:c0|         ; 60 (60)             ; 48 (48)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|CONTROL:c0   ; CONTROL              ; work         ;
 ;       |DB:d0|              ; 19 (19)             ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|DB:d0        ; DB                   ; work         ;
 ;       |INPUT:i0|           ; 72 (72)             ; 56 (56)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|INPUT:i0     ; INPUT                ; work         ;
 ;       |READY:r0|           ; 57 (57)             ; 37 (37)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|READY:r0     ; READY                ; work         ;
@@ -354,9 +354,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; JOIN:j|INPUT:i0|SEG1[2]                ; Merged with JOIN:j|INPUT:i0|SEG2[2]    ;
 ; JOIN:j|INPUT:i0|SEG1[3]                ; Merged with JOIN:j|INPUT:i0|SEG2[3]    ;
 ; JOIN:j|DB:d0|QUESTION[3,11,15,22,23]   ; Stuck at GND due to stuck port data_in ;
+; JOIN:j|INPUT:i0|QUESTION_r[3,10,11]    ; Stuck at GND due to stuck port data_in ;
 ; JOIN:j|CHECK:ch0|check_1[3]            ; Stuck at GND due to stuck port data_in ;
 ; JOIN:j|CHECK:ch0|check_3[3]            ; Stuck at GND due to stuck port data_in ;
-; JOIN:j|INPUT:i0|QUESTION_r[3,10,11]    ; Stuck at GND due to stuck port data_in ;
 ; JOIN:j|INPUT:i0|SEG1_Q[3]              ; Stuck at GND due to stuck port data_in ;
 ; JOIN:j|INPUT:i0|SEG3_Q[2,3]            ; Stuck at GND due to stuck port data_in ;
 ; JOIN:j|CONTROL:c0|nxt~2                ; Lost fanout                            ;
@@ -367,17 +367,15 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; JOIN:j|CONTROL:c0|cur~12               ; Lost fanout                            ;
 ; JOIN:j|CONTROL:c0|cur~13               ; Lost fanout                            ;
 ; JOIN:j|CONTROL:c0|cur~14               ; Lost fanout                            ;
-; JOIN:j|CONTROL:c0|cur.LOSE             ; Merged with JOIN:j|CONTROL:c0|cur.DRAW ;
 ; JOIN:j|CONTROL:c0|cur.OUCH             ; Merged with JOIN:j|CONTROL:c0|cur.DRAW ;
-; JOIN:j|CONTROL:c0|cur.WRONG            ; Merged with JOIN:j|CONTROL:c0|cur.DRAW ;
-; JOIN:j|CONTROL:c0|nxt.LOSE             ; Merged with JOIN:j|CONTROL:c0|nxt.DRAW ;
+; JOIN:j|CONTROL:c0|cur.WIN              ; Merged with JOIN:j|CONTROL:c0|cur.DRAW ;
 ; JOIN:j|CONTROL:c0|nxt.OUCH             ; Merged with JOIN:j|CONTROL:c0|nxt.DRAW ;
-; JOIN:j|CONTROL:c0|nxt.WRONG            ; Merged with JOIN:j|CONTROL:c0|nxt.DRAW ;
+; JOIN:j|CONTROL:c0|nxt.WIN              ; Merged with JOIN:j|CONTROL:c0|nxt.DRAW ;
 ; JOIN:j|CONTROL:c0|nxt.DRAW             ; Stuck at GND due to stuck port data_in ;
-; JOIN:j|CONTROL:c0|nxt.WIN              ; Stuck at GND due to stuck port data_in ;
+; JOIN:j|CONTROL:c0|nxt.LOSE             ; Stuck at GND due to stuck port data_in ;
 ; JOIN:j|CONTROL:c0|cur.DRAW             ; Stuck at GND due to stuck port data_in ;
-; JOIN:j|CONTROL:c0|cur.WIN              ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 44 ;                                        ;
+; JOIN:j|CONTROL:c0|cur.LOSE             ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 42 ;                                        ;
 +----------------------------------------+----------------------------------------+
 
 
@@ -386,14 +384,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------+---------------------------+---------------------------------------------------------------------------------+
 ; Register name              ; Reason for Removal        ; Registers Removed due to This Register                                          ;
 +----------------------------+---------------------------+---------------------------------------------------------------------------------+
-; JOIN:j|DB:d0|QUESTION[3]   ; Stuck at GND              ; JOIN:j|CHECK:ch0|check_1[3], JOIN:j|INPUT:i0|QUESTION_r[3],                     ;
-;                            ; due to stuck port data_in ; JOIN:j|INPUT:i0|QUESTION_r[10], JOIN:j|INPUT:i0|QUESTION_r[11],                 ;
+; JOIN:j|DB:d0|QUESTION[3]   ; Stuck at GND              ; JOIN:j|INPUT:i0|QUESTION_r[3], JOIN:j|INPUT:i0|QUESTION_r[10],                  ;
+;                            ; due to stuck port data_in ; JOIN:j|INPUT:i0|QUESTION_r[11], JOIN:j|CHECK:ch0|check_1[3],                    ;
 ;                            ;                           ; JOIN:j|INPUT:i0|SEG1_Q[3], JOIN:j|INPUT:i0|SEG3_Q[3], JOIN:j|INPUT:i0|SEG3_Q[2] ;
 ; JOIN:j|DB:d0|QUESTION[11]  ; Stuck at GND              ; JOIN:j|CHECK:ch0|check_3[3]                                                     ;
 ;                            ; due to stuck port data_in ;                                                                                 ;
 ; JOIN:j|CONTROL:c0|nxt.DRAW ; Stuck at GND              ; JOIN:j|CONTROL:c0|cur.DRAW                                                      ;
 ;                            ; due to stuck port data_in ;                                                                                 ;
-; JOIN:j|CONTROL:c0|nxt.WIN  ; Stuck at GND              ; JOIN:j|CONTROL:c0|cur.WIN                                                       ;
+; JOIN:j|CONTROL:c0|nxt.LOSE ; Stuck at GND              ; JOIN:j|CONTROL:c0|cur.LOSE                                                      ;
 ;                            ; due to stuck port data_in ;                                                                                 ;
 +----------------------------+---------------------------+---------------------------------------------------------------------------------+
 
@@ -403,7 +401,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 226   ;
+; Total registers                              ; 227   ;
 ; Number of registers using Synchronous Clear  ; 81    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -418,19 +416,19 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
-; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|CONTROL:c0|cnt[2]    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|CHECK:ch0|RESULT[1]  ;
 ; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|BTN_IN:b0|ff2[3]     ;
 ; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|BTN_IN:b0|cnt[10]    ;
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|CHECK:ch0|RESULT[1]  ;
-; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|READY:r0|cnt[2]      ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|READY:r0|cnt[7]      ;
+; 4:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|CONTROL:c0|cnt[21]   ;
 ; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|READY:r0|sec[3]      ;
 ; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|INPUT:i0|COUNT1[0]   ;
 ; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|INPUT:i0|COUNT3[0]   ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|INPUT:i0|COUNT2[2]   ;
-; 10:1               ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|CONTROL:c0|STATE[0]  ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|INPUT:i0|COUNT2[0]   ;
+; 10:1               ; 4 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|CONTROL:c0|STATE[2]  ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |DE10_LITE_Golden_Top|JOIN:j|SEG7DEC_1:s2|nHEX[1] ;
-; 3:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |DE10_LITE_Golden_Top|JOIN:j|SEG7DEC_1:s0|nHEX[4] ;
-; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |DE10_LITE_Golden_Top|JOIN:j|SEG7DEC_2:s1|nHEX[3] ;
+; 3:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; No         ; |DE10_LITE_Golden_Top|JOIN:j|SEG7DEC_2:s3|nHEX[6] ;
+; 3:1                ; 12 bits   ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |DE10_LITE_Golden_Top|JOIN:j|SEG7DEC_1:s4|nHEX[0] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
 
 
@@ -455,22 +453,21 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 185                         ;
-; cycloneiii_ff         ; 226                         ;
+; cycloneiii_ff         ; 227                         ;
 ;     ENA               ; 44                          ;
 ;     ENA SCLR          ; 1                           ;
 ;     SCLR              ; 80                          ;
-;     plain             ; 101                         ;
+;     plain             ; 102                         ;
 ; cycloneiii_io_obuf    ; 71                          ;
-; cycloneiii_lcell_comb ; 412                         ;
+; cycloneiii_lcell_comb ; 418                         ;
 ;     arith             ; 70                          ;
-;         2 data inputs ; 69                          ;
-;         3 data inputs ; 1                           ;
-;     normal            ; 342                         ;
+;         2 data inputs ; 70                          ;
+;     normal            ; 348                         ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 4                           ;
-;         2 data inputs ; 65                          ;
-;         3 data inputs ; 52                          ;
-;         4 data inputs ; 220                         ;
+;         2 data inputs ; 68                          ;
+;         3 data inputs ; 51                          ;
+;         4 data inputs ; 224                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 5.00                        ;
 ; Average LUT depth     ; 2.60                        ;
@@ -492,7 +489,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
-    Info: Processing started: Wed Dec 06 15:14:56 2023
+    Info: Processing started: Wed Dec 06 19:07:14 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 1PTEST_4 -c 1PTEST_4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -842,16 +839,16 @@ Warning (21074): Design contains 8 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_4/DE10_LITE_Golden_Top.v Line: 91
     Warning (15610): No output dependent on input pin "GSENSOR_INT[1]" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_4/DE10_LITE_Golden_Top.v Line: 106
     Warning (15610): No output dependent on input pin "GSENSOR_INT[2]" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_4/DE10_LITE_Golden_Top.v Line: 106
-Info (21057): Implemented 639 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 644 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 17 input pins
     Info (21059): Implemented 97 output pins
     Info (21060): Implemented 71 bidirectional pins
-    Info (21061): Implemented 454 logic cells
+    Info (21061): Implemented 459 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 292 warnings
-    Info: Peak virtual memory: 4814 megabytes
-    Info: Processing ended: Wed Dec 06 15:15:23 2023
-    Info: Elapsed time: 00:00:27
-    Info: Total CPU time (on all processors): 00:00:16
+    Info: Peak virtual memory: 4813 megabytes
+    Info: Processing ended: Wed Dec 06 19:07:35 2023
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:17
 
 
 +------------------------------------------+

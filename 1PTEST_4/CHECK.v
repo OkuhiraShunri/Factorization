@@ -19,14 +19,14 @@ end
 
 
 always @(posedge CLK)begin
-  if(check_1 == 4'b0 && check_2 == 4'b0 && check_3 == 4'b0) begin
+  if(answer_1 == 4'b0 && answer_2 == 4'b0 && answer_3 == 4'b0) begin
     RESULT <= RESULT;
   end
   else if(RST)
     RESULT <= 2'b00;
-  else if(answer_1 == check_1 && answer_2 == check_2 && answer_3 == check_3)//正しい
+  else if((answer_1 == check_1) && (answer_2 == check_2) && (answer_3 == check_3))//正しい
     RESULT <= 2'b01;
-  else if(answer_1 != check_1 || answer_2 != check_2 || answer_3 != check_3)//誤り
+  else if((answer_1 != check_1) || (answer_2 != check_2) || (answer_3 != check_3))//誤り
     RESULT <= 2'b11;    
   else
     RESULT <= 2'b00;//正誤判定するまえはずっとゼロ出力  

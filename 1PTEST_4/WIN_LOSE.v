@@ -8,13 +8,13 @@ module WIN_LOSE ( //どっちの正解が早かったかというモジュール
 reg [1:0] ENEMY;
 initial begin
   ENEMY <= 2'b00;
-  WL_OUT <= 2'b00;
+  //WL_OUT <= 2'b00;
  end   
 
 always @(posedge CLK) begin
-    if(ENEMY == 2'b00 && MINE == 2'b00)
-        WL_OUT <= WL_OUT;
-    else if(ENEMY == 2'b01 && MINE == 2'b01)
+    // if(ENEMY == 2'b00 && MINE == 2'b00)
+    //     WL_OUT <= WL_OUT;
+    if(ENEMY == 2'b01 && MINE == 2'b01)
         WL_OUT <= 2'b11; //ドロー
     else if(ENEMY == 2'b01 && MINE != 2'b01)
         WL_OUT <= 2'b10; //相手勝ち
