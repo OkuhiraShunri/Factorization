@@ -1,0 +1,274 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5
+vBTN_IN
+Z1 !s110 1701844401
+!i10b 1
+!s100 Q9fF0Eh;=^mgV2DFl6l740
+I8mOLff2IfISh=AaHO=P:j1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1701698330
+8C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/BTN_IN.v
+FC:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/BTN_IN.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1701844401.000000
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/BTN_IN.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/BTN_IN.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@b@t@n_@i@n
+vCHECK
+R1
+!i10b 1
+!s100 NFTI@UnQ3DnbKJS_@SHaS1
+ID96mKZYId3H3ba4[jW2Bn1
+R2
+R0
+w1701772041
+8C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/CHECK.v
+FC:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/CHECK.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/CHECK.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/CHECK.v|
+!i113 1
+R5
+R6
+n@c@h@e@c@k
+vCONTROL
+R1
+!i10b 1
+!s100 EldlaEF:1omQ[3o6d_0K_0
+I]oMhSci[J3k:=C@B@fj6g3
+R2
+R0
+w1701778432
+8C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/CONTROL.v
+FC:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/CONTROL.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/CONTROL.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/CONTROL.v|
+!i113 1
+R5
+R6
+n@c@o@n@t@r@o@l
+vDB
+R1
+!i10b 1
+!s100 Z2<FURcQG8hYHMnYLazY=3
+I;c?^=iW6o9PddaS`:TfaE3
+R2
+R0
+w1701769505
+8C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/DB.v
+FC:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/DB.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/DB.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/DB.v|
+!i113 1
+R5
+R6
+n@d@b
+vINPUT
+R1
+!i10b 1
+!s100 K<^O0@@<V7N8N2TATcWVA2
+I6K<o50=RZSdRMVLiO<8WN2
+R2
+R0
+w1701778480
+8C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/INPUT.v
+FC:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/INPUT.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/INPUT.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/INPUT.v|
+!i113 1
+R5
+R6
+n@i@n@p@u@t
+vJOIN
+R1
+!i10b 1
+!s100 O?fWMN@:kn6@o^JD7@M3A2
+IF9_0<a<fGHLTA;LUA6M;80
+R2
+R0
+w1701781574
+8C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/JOIN.v
+FC:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/JOIN.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/JOIN.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/JOIN.v|
+!i113 1
+R5
+R6
+n@j@o@i@n
+vJOIN_SIM_4
+!s110 1701778770
+!i10b 1
+!s100 GfZN2bP0h?3Ln^IEU5MHe0
+I_S@M5GlPDCIVaT;5JeV_g2
+R2
+R0
+w1701778705
+Z7 8C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/JOIN_SIM_5.v
+Z8 FC:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/JOIN_SIM_5.v
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1701778770.000000
+Z9 !s107 C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/JOIN_SIM_5.v|
+Z10 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/JOIN_SIM_5.v|
+!i113 1
+R5
+R6
+n@j@o@i@n_@s@i@m_4
+vJOIN_SIM_5
+R1
+!i10b 1
+!s100 akdhGW3b;i640Q52zMTLl0
+I;8I7En_H9_T;mTV^VcIVH0
+R2
+R0
+w1701844396
+R7
+R8
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+R9
+R10
+!i113 1
+R5
+R6
+n@j@o@i@n_@s@i@m_5
+vREADY
+R1
+!i10b 1
+!s100 L@GLPR0`IfCnoziAafhia3
+IUbBJiO45b2CV?8zOEPh8:1
+R2
+R0
+w1701768055
+8C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/READY.v
+FC:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/READY.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/READY.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/READY.v|
+!i113 1
+R5
+R6
+n@r@e@a@d@y
+vSEG7DEC_1
+R1
+!i10b 1
+!s100 o6E<V2L;NBgl=ZgWm;Hi^2
+IBWJWThSe[BI3K^5UE:_cN3
+R2
+R0
+w1701773754
+8C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/SEG7DEC_1.v
+FC:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/SEG7DEC_1.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/SEG7DEC_1.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/SEG7DEC_1.v|
+!i113 1
+R5
+R6
+n@s@e@g7@d@e@c_1
+vSEG7DEC_2
+R1
+!i10b 1
+!s100 e6;B_Qn9A_ffSilgjPD_43
+I4zdiQ[b=b0nGjhF@[VP4I3
+R2
+R0
+w1701773752
+8C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/SEG7DEC_2.v
+FC:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/SEG7DEC_2.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/SEG7DEC_2.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/SEG7DEC_2.v|
+!i113 1
+R5
+R6
+n@s@e@g7@d@e@c_2
+vWIN_LOSE
+R1
+!i10b 1
+!s100 l9[FPB<Fl>hnDm7NfalIS0
+I:g9NQQ8]gP3Vo]0HzcWYb0
+R2
+R0
+w1701778543
+8C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/WIN_LOSE.v
+FC:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/WIN_LOSE.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/WIN_LOSE.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/WIN_LOSE.v|
+!i113 1
+R5
+R6
+n@w@i@n_@l@o@s@e

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for 1PTEST_3
-Mon Dec 04 23:02:05 2023
+Tue Dec 05 18:30:34 2023
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
 
 
@@ -49,15 +49,15 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Dec 04 23:02:05 2023           ;
+; Analysis & Synthesis Status        ; Successful - Tue Dec 05 18:30:34 2023           ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Standard Edition ;
 ; Revision Name                      ; 1PTEST_3                                        ;
 ; Top-level Entity Name              ; DE10_LITE_Golden_Top                            ;
 ; Family                             ; MAX 10                                          ;
-; Total logic elements               ; 210                                             ;
-;     Total combinational functions  ; 200                                             ;
-;     Dedicated logic registers      ; 85                                              ;
-; Total registers                    ; 85                                              ;
+; Total logic elements               ; 333                                             ;
+;     Total combinational functions  ; 325                                             ;
+;     Dedicated logic registers      ; 149                                             ;
+; Total registers                    ; 149                                             ;
 ; Total pins                         ; 185                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
@@ -193,20 +193,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------------+
 ; Resource                                    ; Usage               ;
 +---------------------------------------------+---------------------+
-; Estimated Total logic elements              ; 210                 ;
+; Estimated Total logic elements              ; 333                 ;
 ;                                             ;                     ;
-; Total combinational functions               ; 200                 ;
+; Total combinational functions               ; 325                 ;
 ; Logic element usage by number of LUT inputs ;                     ;
-;     -- 4 input functions                    ; 105                 ;
-;     -- 3 input functions                    ; 49                  ;
-;     -- <=2 input functions                  ; 46                  ;
+;     -- 4 input functions                    ; 192                 ;
+;     -- 3 input functions                    ; 44                  ;
+;     -- <=2 input functions                  ; 89                  ;
 ;                                             ;                     ;
 ; Logic elements by mode                      ;                     ;
-;     -- normal mode                          ; 180                 ;
-;     -- arithmetic mode                      ; 20                  ;
+;     -- normal mode                          ; 280                 ;
+;     -- arithmetic mode                      ; 45                  ;
 ;                                             ;                     ;
-; Total registers                             ; 85                  ;
-;     -- Dedicated logic registers            ; 85                  ;
+; Total registers                             ; 149                 ;
+;     -- Dedicated logic registers            ; 149                 ;
 ;     -- I/O registers                        ; 0                   ;
 ;                                             ;                     ;
 ; I/O pins                                    ; 185                 ;
@@ -214,9 +214,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0                   ;
 ;                                             ;                     ;
 ; Maximum fan-out node                        ; MAX10_CLK1_50~input ;
-; Maximum fan-out                             ; 85                  ;
-; Total fan-out                               ; 1184                ;
-; Average fan-out                             ; 1.63                ;
+; Maximum fan-out                             ; 149                 ;
+; Total fan-out                               ; 1756                ;
+; Average fan-out                             ; 1.92                ;
 +---------------------------------------------+---------------------+
 
 
@@ -225,19 +225,19 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                       ; Entity Name          ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------+----------------------+--------------+
-; |DE10_LITE_Golden_Top      ; 200 (0)             ; 85 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 185  ; 0            ; 0          ; |DE10_LITE_Golden_Top                     ; DE10_LITE_Golden_Top ; work         ;
-;    |JOIN:j|                ; 200 (0)             ; 85 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j              ; JOIN                 ; work         ;
+; |DE10_LITE_Golden_Top      ; 325 (0)             ; 149 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 185  ; 0            ; 0          ; |DE10_LITE_Golden_Top                     ; DE10_LITE_Golden_Top ; work         ;
+;    |JOIN:j|                ; 325 (0)             ; 149 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j              ; JOIN                 ; work         ;
 ;       |BTN_IN:b0|          ; 47 (47)             ; 39 (39)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|BTN_IN:b0    ; BTN_IN               ; work         ;
 ;       |CONTROL:c0|         ; 11 (11)             ; 14 (14)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|CONTROL:c0   ; CONTROL              ; work         ;
-;       |DB:d0|              ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|DB:d0        ; DB                   ; work         ;
-;       |INPUT:i0|           ; 40 (40)             ; 28 (28)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|INPUT:i0     ; INPUT                ; work         ;
-;       |READY:r0|           ; 1 (1)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|READY:r0     ; READY                ; work         ;
-;       |SEG7DEC_1:s0|       ; 22 (22)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|SEG7DEC_1:s0 ; SEG7DEC_1            ; work         ;
-;       |SEG7DEC_1:s2|       ; 20 (20)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|SEG7DEC_1:s2 ; SEG7DEC_1            ; work         ;
-;       |SEG7DEC_1:s4|       ; 20 (20)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|SEG7DEC_1:s4 ; SEG7DEC_1            ; work         ;
-;       |SEG7DEC_2:s1|       ; 12 (12)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|SEG7DEC_2:s1 ; SEG7DEC_2            ; work         ;
-;       |SEG7DEC_2:s3|       ; 13 (13)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|SEG7DEC_2:s3 ; SEG7DEC_2            ; work         ;
-;       |SEG7DEC_2:s5|       ; 14 (14)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|SEG7DEC_2:s5 ; SEG7DEC_2            ; work         ;
+;       |DB:d0|              ; 15 (15)             ; 15 (15)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|DB:d0        ; DB                   ; work         ;
+;       |INPUT:i0|           ; 65 (65)             ; 44 (44)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|INPUT:i0     ; INPUT                ; work         ;
+;       |READY:r0|           ; 56 (56)             ; 37 (37)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|READY:r0     ; READY                ; work         ;
+;       |SEG7DEC_1:s0|       ; 26 (26)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|SEG7DEC_1:s0 ; SEG7DEC_1            ; work         ;
+;       |SEG7DEC_1:s2|       ; 21 (21)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|SEG7DEC_1:s2 ; SEG7DEC_1            ; work         ;
+;       |SEG7DEC_1:s4|       ; 21 (21)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|SEG7DEC_1:s4 ; SEG7DEC_1            ; work         ;
+;       |SEG7DEC_2:s1|       ; 25 (25)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|SEG7DEC_2:s1 ; SEG7DEC_2            ; work         ;
+;       |SEG7DEC_2:s3|       ; 19 (19)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|SEG7DEC_2:s3 ; SEG7DEC_2            ; work         ;
+;       |SEG7DEC_2:s5|       ; 19 (19)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |DE10_LITE_Golden_Top|JOIN:j|SEG7DEC_2:s5 ; SEG7DEC_2            ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -330,64 +330,53 @@ Encoding Type:  One-Hot
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+-------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                              ;
-+-----------------------------------------------------+-------------------------------------------+
-; Register name                                       ; Reason for Removal                        ;
-+-----------------------------------------------------+-------------------------------------------+
-; JOIN:j|READY:r0|NUM[1,3]                            ; Stuck at GND due to stuck port data_in    ;
-; JOIN:j|INPUT:i0|SEG5[0]                             ; Merged with JOIN:j|INPUT:i0|SEG6[0]       ;
-; JOIN:j|INPUT:i0|SEG5[1]                             ; Merged with JOIN:j|INPUT:i0|SEG6[1]       ;
-; JOIN:j|INPUT:i0|SEG5[2]                             ; Merged with JOIN:j|INPUT:i0|SEG6[2]       ;
-; JOIN:j|INPUT:i0|SEG5[3]                             ; Merged with JOIN:j|INPUT:i0|SEG6[3]       ;
-; JOIN:j|INPUT:i0|SEG3[0]                             ; Merged with JOIN:j|INPUT:i0|SEG4[0]       ;
-; JOIN:j|INPUT:i0|SEG3[1]                             ; Merged with JOIN:j|INPUT:i0|SEG4[1]       ;
-; JOIN:j|INPUT:i0|SEG3[2]                             ; Merged with JOIN:j|INPUT:i0|SEG4[2]       ;
-; JOIN:j|INPUT:i0|SEG3[3]                             ; Merged with JOIN:j|INPUT:i0|SEG4[3]       ;
-; JOIN:j|INPUT:i0|SEG1[0]                             ; Merged with JOIN:j|INPUT:i0|SEG2[0]       ;
-; JOIN:j|INPUT:i0|SEG1[1]                             ; Merged with JOIN:j|INPUT:i0|SEG2[1]       ;
-; JOIN:j|INPUT:i0|SEG1[2]                             ; Merged with JOIN:j|INPUT:i0|SEG2[2]       ;
-; JOIN:j|INPUT:i0|SEG1[3]                             ; Merged with JOIN:j|INPUT:i0|SEG2[3]       ;
-; JOIN:j|READY:r0|NUM[0]                              ; Merged with JOIN:j|READY:r0|NUM[2]        ;
-; JOIN:j|READY:r0|OK                                  ; Merged with JOIN:j|READY:r0|NUM[2]        ;
-; JOIN:j|CONTROL:c0|STATE[3]                          ; Stuck at GND due to stuck port data_in    ;
-; JOIN:j|DB:d0|QUESTION[0,3,4,6,7,10,11,15,16,19..23] ; Stuck at GND due to stuck port data_in    ;
-; JOIN:j|INPUT:i0|QUESTION_r[3,4,7..11]               ; Stuck at GND due to stuck port data_in    ;
-; JOIN:j|INPUT:i0|SEG1_Q[3]                           ; Stuck at GND due to stuck port data_in    ;
-; JOIN:j|INPUT:i0|SEG2_Q[0,3]                         ; Stuck at GND due to stuck port data_in    ;
-; JOIN:j|INPUT:i0|SEG3_Q[0..3]                        ; Stuck at GND due to stuck port data_in    ;
-; JOIN:j|DB:d0|QUESTION[1,9,12,14,17]                 ; Stuck at GND due to stuck port data_in    ;
-; JOIN:j|INPUT:i0|QUESTION_r[0,2,5]                   ; Stuck at GND due to stuck port data_in    ;
-; JOIN:j|INPUT:i0|SEG1_Q[0,2]                         ; Stuck at GND due to stuck port data_in    ;
-; JOIN:j|INPUT:i0|SEG2_Q[1]                           ; Stuck at GND due to stuck port data_in    ;
-; JOIN:j|CONTROL:c0|STATE[2]                          ; Merged with JOIN:j|CONTROL:c0|STATE[1]    ;
-; JOIN:j|DB:d0|QUESTION[2,5,8,18]                     ; Merged with JOIN:j|DB:d0|QUESTION[13]     ;
-; JOIN:j|INPUT:i0|QUESTION_r[6]                       ; Merged with JOIN:j|INPUT:i0|QUESTION_r[1] ;
-; JOIN:j|INPUT:i0|SEG2_Q[2]                           ; Merged with JOIN:j|INPUT:i0|SEG1_Q[1]     ;
-; JOIN:j|CONTROL:c0|nxt~2                             ; Lost fanout                               ;
-; JOIN:j|CONTROL:c0|nxt~3                             ; Lost fanout                               ;
-; JOIN:j|CONTROL:c0|nxt~4                             ; Lost fanout                               ;
-; JOIN:j|CONTROL:c0|nxt~5                             ; Lost fanout                               ;
-; JOIN:j|CONTROL:c0|cur~11                            ; Lost fanout                               ;
-; JOIN:j|CONTROL:c0|cur~12                            ; Lost fanout                               ;
-; JOIN:j|CONTROL:c0|cur~13                            ; Lost fanout                               ;
-; JOIN:j|CONTROL:c0|cur~14                            ; Lost fanout                               ;
-; JOIN:j|CONTROL:c0|cur.WIN                           ; Merged with JOIN:j|CONTROL:c0|cur.GOOD    ;
-; JOIN:j|CONTROL:c0|cur.WRONG                         ; Merged with JOIN:j|CONTROL:c0|cur.GOOD    ;
-; JOIN:j|CONTROL:c0|cur.LOSE                          ; Merged with JOIN:j|CONTROL:c0|cur.DRAW    ;
-; JOIN:j|CONTROL:c0|cur.OUCH                          ; Merged with JOIN:j|CONTROL:c0|cur.DRAW    ;
-; JOIN:j|CONTROL:c0|nxt.WIN                           ; Merged with JOIN:j|CONTROL:c0|nxt.GOOD    ;
-; JOIN:j|CONTROL:c0|nxt.WRONG                         ; Merged with JOIN:j|CONTROL:c0|nxt.GOOD    ;
-; JOIN:j|CONTROL:c0|nxt.LOSE                          ; Merged with JOIN:j|CONTROL:c0|nxt.DRAW    ;
-; JOIN:j|CONTROL:c0|nxt.OUCH                          ; Merged with JOIN:j|CONTROL:c0|nxt.DRAW    ;
-; JOIN:j|CONTROL:c0|nxt.DRAW                          ; Stuck at GND due to stuck port data_in    ;
-; JOIN:j|CONTROL:c0|nxt.GOOD                          ; Stuck at GND due to stuck port data_in    ;
-; JOIN:j|CONTROL:c0|cur.DRAW                          ; Stuck at GND due to stuck port data_in    ;
-; JOIN:j|CONTROL:c0|cur.GOOD                          ; Stuck at GND due to stuck port data_in    ;
-; JOIN:j|CONTROL:c0|cnt[0..25]                        ; Lost fanout                               ;
-; JOIN:j|CONTROL:c0|NEED_1SEC                         ; Lost fanout                               ;
-; Total Number of Removed Registers = 110             ;                                           ;
-+-----------------------------------------------------+-------------------------------------------+
++----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                     ;
++-----------------------------------------------+----------------------------------------+
+; Register name                                 ; Reason for Removal                     ;
++-----------------------------------------------+----------------------------------------+
+; JOIN:j|INPUT:i0|SEG5[0]                       ; Merged with JOIN:j|INPUT:i0|SEG6[0]    ;
+; JOIN:j|INPUT:i0|SEG5[1]                       ; Merged with JOIN:j|INPUT:i0|SEG6[1]    ;
+; JOIN:j|INPUT:i0|SEG5[2]                       ; Merged with JOIN:j|INPUT:i0|SEG6[2]    ;
+; JOIN:j|INPUT:i0|SEG5[3]                       ; Merged with JOIN:j|INPUT:i0|SEG6[3]    ;
+; JOIN:j|INPUT:i0|SEG3[0]                       ; Merged with JOIN:j|INPUT:i0|SEG4[0]    ;
+; JOIN:j|INPUT:i0|SEG3[1]                       ; Merged with JOIN:j|INPUT:i0|SEG4[1]    ;
+; JOIN:j|INPUT:i0|SEG3[2]                       ; Merged with JOIN:j|INPUT:i0|SEG4[2]    ;
+; JOIN:j|INPUT:i0|SEG3[3]                       ; Merged with JOIN:j|INPUT:i0|SEG4[3]    ;
+; JOIN:j|INPUT:i0|SEG1[0]                       ; Merged with JOIN:j|INPUT:i0|SEG2[0]    ;
+; JOIN:j|INPUT:i0|SEG1[1]                       ; Merged with JOIN:j|INPUT:i0|SEG2[1]    ;
+; JOIN:j|INPUT:i0|SEG1[2]                       ; Merged with JOIN:j|INPUT:i0|SEG2[2]    ;
+; JOIN:j|INPUT:i0|SEG1[3]                       ; Merged with JOIN:j|INPUT:i0|SEG2[3]    ;
+; JOIN:j|CONTROL:c0|STATE[3]                    ; Stuck at GND due to stuck port data_in ;
+; JOIN:j|DB:d0|QUESTION[3,4,6,7,10,11,15,22,23] ; Stuck at GND due to stuck port data_in ;
+; JOIN:j|INPUT:i0|QUESTION_r[3,10,11]           ; Stuck at GND due to stuck port data_in ;
+; JOIN:j|INPUT:i0|SEG1_Q[3]                     ; Stuck at GND due to stuck port data_in ;
+; JOIN:j|INPUT:i0|SEG3_Q[2,3]                   ; Stuck at GND due to stuck port data_in ;
+; JOIN:j|CONTROL:c0|STATE[2]                    ; Merged with JOIN:j|CONTROL:c0|STATE[1] ;
+; JOIN:j|CONTROL:c0|nxt~2                       ; Lost fanout                            ;
+; JOIN:j|CONTROL:c0|nxt~3                       ; Lost fanout                            ;
+; JOIN:j|CONTROL:c0|nxt~4                       ; Lost fanout                            ;
+; JOIN:j|CONTROL:c0|nxt~5                       ; Lost fanout                            ;
+; JOIN:j|CONTROL:c0|cur~11                      ; Lost fanout                            ;
+; JOIN:j|CONTROL:c0|cur~12                      ; Lost fanout                            ;
+; JOIN:j|CONTROL:c0|cur~13                      ; Lost fanout                            ;
+; JOIN:j|CONTROL:c0|cur~14                      ; Lost fanout                            ;
+; JOIN:j|CONTROL:c0|cur.WIN                     ; Merged with JOIN:j|CONTROL:c0|cur.GOOD ;
+; JOIN:j|CONTROL:c0|cur.WRONG                   ; Merged with JOIN:j|CONTROL:c0|cur.GOOD ;
+; JOIN:j|CONTROL:c0|cur.LOSE                    ; Merged with JOIN:j|CONTROL:c0|cur.DRAW ;
+; JOIN:j|CONTROL:c0|cur.OUCH                    ; Merged with JOIN:j|CONTROL:c0|cur.DRAW ;
+; JOIN:j|CONTROL:c0|nxt.WIN                     ; Merged with JOIN:j|CONTROL:c0|nxt.GOOD ;
+; JOIN:j|CONTROL:c0|nxt.WRONG                   ; Merged with JOIN:j|CONTROL:c0|nxt.GOOD ;
+; JOIN:j|CONTROL:c0|nxt.LOSE                    ; Merged with JOIN:j|CONTROL:c0|nxt.DRAW ;
+; JOIN:j|CONTROL:c0|nxt.OUCH                    ; Merged with JOIN:j|CONTROL:c0|nxt.DRAW ;
+; JOIN:j|CONTROL:c0|nxt.DRAW                    ; Stuck at GND due to stuck port data_in ;
+; JOIN:j|CONTROL:c0|nxt.GOOD                    ; Stuck at GND due to stuck port data_in ;
+; JOIN:j|CONTROL:c0|cur.DRAW                    ; Stuck at GND due to stuck port data_in ;
+; JOIN:j|CONTROL:c0|cur.GOOD                    ; Stuck at GND due to stuck port data_in ;
+; JOIN:j|CONTROL:c0|cnt[0..25]                  ; Lost fanout                            ;
+; JOIN:j|CONTROL:c0|NEED_1SEC                   ; Lost fanout                            ;
+; Total Number of Removed Registers = 76        ;                                        ;
++-----------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -395,14 +384,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------+---------------------------+---------------------------------------------------------------------------------------+
 ; Register name              ; Reason for Removal        ; Registers Removed due to This Register                                                ;
 +----------------------------+---------------------------+---------------------------------------------------------------------------------------+
-; JOIN:j|CONTROL:c0|STATE[3] ; Stuck at GND              ; JOIN:j|INPUT:i0|QUESTION_r[3], JOIN:j|INPUT:i0|QUESTION_r[4],                         ;
-;                            ; due to stuck port data_in ; JOIN:j|INPUT:i0|QUESTION_r[7], JOIN:j|INPUT:i0|QUESTION_r[8],                         ;
-;                            ;                           ; JOIN:j|INPUT:i0|QUESTION_r[9], JOIN:j|INPUT:i0|QUESTION_r[10],                        ;
-;                            ;                           ; JOIN:j|INPUT:i0|QUESTION_r[11], JOIN:j|INPUT:i0|SEG1_Q[3], JOIN:j|INPUT:i0|SEG2_Q[3], ;
-;                            ;                           ; JOIN:j|INPUT:i0|SEG2_Q[0], JOIN:j|INPUT:i0|SEG3_Q[3], JOIN:j|INPUT:i0|SEG3_Q[2],      ;
-;                            ;                           ; JOIN:j|INPUT:i0|SEG3_Q[1], JOIN:j|INPUT:i0|SEG3_Q[0], JOIN:j|INPUT:i0|QUESTION_r[0],  ;
-;                            ;                           ; JOIN:j|INPUT:i0|QUESTION_r[2], JOIN:j|INPUT:i0|QUESTION_r[5],                         ;
-;                            ;                           ; JOIN:j|INPUT:i0|SEG1_Q[2], JOIN:j|INPUT:i0|SEG1_Q[0], JOIN:j|INPUT:i0|SEG2_Q[1]       ;
 ; JOIN:j|CONTROL:c0|nxt~2    ; Lost Fanouts              ; JOIN:j|CONTROL:c0|cnt[2], JOIN:j|CONTROL:c0|cnt[1], JOIN:j|CONTROL:c0|cnt[0],         ;
 ;                            ;                           ; JOIN:j|CONTROL:c0|cnt[4], JOIN:j|CONTROL:c0|cnt[6], JOIN:j|CONTROL:c0|cnt[8],         ;
 ;                            ;                           ; JOIN:j|CONTROL:c0|cnt[10], JOIN:j|CONTROL:c0|cnt[12], JOIN:j|CONTROL:c0|cnt[14],      ;
@@ -412,8 +393,9 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ;                            ;                           ; JOIN:j|CONTROL:c0|cnt[9], JOIN:j|CONTROL:c0|cnt[11], JOIN:j|CONTROL:c0|cnt[13],       ;
 ;                            ;                           ; JOIN:j|CONTROL:c0|cnt[15], JOIN:j|CONTROL:c0|cnt[17], JOIN:j|CONTROL:c0|cnt[19],      ;
 ;                            ;                           ; JOIN:j|CONTROL:c0|cnt[21], JOIN:j|CONTROL:c0|cnt[23], JOIN:j|CONTROL:c0|cnt[25]       ;
-; JOIN:j|READY:r0|NUM[3]     ; Stuck at GND              ; JOIN:j|DB:d0|QUESTION[0], JOIN:j|DB:d0|QUESTION[3], JOIN:j|DB:d0|QUESTION[4],         ;
-;                            ; due to stuck port data_in ; JOIN:j|DB:d0|QUESTION[1]                                                              ;
+; JOIN:j|CONTROL:c0|STATE[3] ; Stuck at GND              ; JOIN:j|INPUT:i0|QUESTION_r[3], JOIN:j|INPUT:i0|QUESTION_r[10],                        ;
+;                            ; due to stuck port data_in ; JOIN:j|INPUT:i0|QUESTION_r[11], JOIN:j|INPUT:i0|SEG1_Q[3], JOIN:j|INPUT:i0|SEG3_Q[3], ;
+;                            ;                           ; JOIN:j|INPUT:i0|SEG3_Q[2]                                                             ;
 ; JOIN:j|CONTROL:c0|nxt.DRAW ; Stuck at GND              ; JOIN:j|CONTROL:c0|cur.DRAW                                                            ;
 ;                            ; due to stuck port data_in ;                                                                                       ;
 ; JOIN:j|CONTROL:c0|nxt.GOOD ; Stuck at GND              ; JOIN:j|CONTROL:c0|cur.GOOD                                                            ;
@@ -426,8 +408,8 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 85    ;
-; Number of registers using Synchronous Clear  ; 27    ;
+; Total registers                              ; 149   ;
+; Number of registers using Synchronous Clear  ; 53    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
@@ -441,11 +423,13 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                       ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
-; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|CONTROL:c0|cnt[19]  ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|CONTROL:c0|cnt[12]  ;
 ; 3:1                ; 12 bits   ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|BTN_IN:b0|ff2[6]    ;
-; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|BTN_IN:b0|cnt[7]    ;
+; 3:1                ; 21 bits   ; 42 LEs        ; 21 LEs               ; 21 LEs                 ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|BTN_IN:b0|cnt[2]    ;
+; 3:1                ; 26 bits   ; 52 LEs        ; 26 LEs               ; 26 LEs                 ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|READY:r0|cnt[6]     ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|CONTROL:c0|STATE[2] ;
-; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|INPUT:i0|COUNT1[0]  ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 4 LEs                ; 8 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|READY:r0|sec[0]     ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|INPUT:i0|COUNT1[3]  ;
 ; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|INPUT:i0|COUNT3[3]  ;
 ; 6:1                ; 4 bits    ; 16 LEs        ; 8 LEs                ; 8 LEs                  ; Yes        ; |DE10_LITE_Golden_Top|JOIN:j|INPUT:i0|COUNT2[3]  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------+
@@ -477,23 +461,23 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 185                         ;
-; cycloneiii_ff         ; 85                          ;
+; cycloneiii_ff         ; 149                         ;
 ;     ENA               ; 30                          ;
-;     SCLR              ; 27                          ;
-;     plain             ; 28                          ;
+;     SCLR              ; 53                          ;
+;     plain             ; 66                          ;
 ; cycloneiii_io_obuf    ; 71                          ;
-; cycloneiii_lcell_comb ; 201                         ;
-;     arith             ; 20                          ;
-;         2 data inputs ; 20                          ;
-;     normal            ; 181                         ;
+; cycloneiii_lcell_comb ; 326                         ;
+;     arith             ; 45                          ;
+;         2 data inputs ; 45                          ;
+;     normal            ; 281                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 1                           ;
-;         2 data inputs ; 25                          ;
-;         3 data inputs ; 49                          ;
-;         4 data inputs ; 105                         ;
+;         1 data inputs ; 2                           ;
+;         2 data inputs ; 42                          ;
+;         3 data inputs ; 44                          ;
+;         4 data inputs ; 192                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 1.90                        ;
+; Max LUT depth         ; 5.00                        ;
+; Average LUT depth     ; 2.39                        ;
 +-----------------------+-----------------------------+
 
 
@@ -512,7 +496,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Standard Edition
-    Info: Processing started: Mon Dec 04 23:01:44 2023
+    Info: Processing started: Tue Dec 05 18:30:14 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 1PTEST_3 -c 1PTEST_3
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -558,6 +542,7 @@ Info (12128): Elaborating entity "BTN_IN" for hierarchy "JOIN:j|BTN_IN:b0" File:
 Info (12128): Elaborating entity "CONTROL" for hierarchy "JOIN:j|CONTROL:c0" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/JOIN.v Line: 27
 Info (10264): Verilog HDL Case Statement information at CONTROL.v(65): all case item expressions in this case statement are onehot File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 65
 Info (12128): Elaborating entity "READY" for hierarchy "JOIN:j|READY:r0" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/JOIN.v Line: 29
+Warning (10230): Verilog HDL assignment warning at READY.v(62): truncated value with size 32 to match size of target (4) File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/READY.v Line: 62
 Info (12128): Elaborating entity "DB" for hierarchy "JOIN:j|DB:d0" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/JOIN.v Line: 31
 Warning (10030): Net "Q_table.data_a" at DB.v(7) has no driver or initial value, using a default initial value '0' File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/DB.v Line: 7
 Warning (10030): Net "Q_table.waddr_a" at DB.v(7) has no driver or initial value, using a default initial value '0' File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/DB.v Line: 7
@@ -584,7 +569,7 @@ Info (10041): Inferred latch for "nHEX[3]" at SEG7DEC_2.v(13) File: C:/Users/Oku
 Info (10041): Inferred latch for "nHEX[4]" at SEG7DEC_2.v(13) File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/SEG7DEC_2.v Line: 13
 Info (10041): Inferred latch for "nHEX[5]" at SEG7DEC_2.v(13) File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/SEG7DEC_2.v Line: 13
 Info (10041): Inferred latch for "nHEX[6]" at SEG7DEC_2.v(13) File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/SEG7DEC_2.v Line: 13
-Critical Warning (127005): Memory depth (16) in the design file differs from memory depth (9) in the Memory Initialization File "C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/db/1PTEST_3.ram0_DB_897.hdl.mif" -- setting initial value for remaining addresses to 0
+Critical Warning (127005): Memory depth (16) in the design file differs from memory depth (11) in the Memory Initialization File "C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/db/1PTEST_3.ram0_DB_897.hdl.mif" -- setting initial value for remaining addresses to 0
 Info (276014): Found 1 instances of uninferred RAM logic
     Info (276013): RAM logic "JOIN:j|DB:d0|Q_table" is uninferred because MIF is not supported for the selected family File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/DB.v Line: 7
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
@@ -661,12 +646,6 @@ Warning (13039): The following bidirectional pins have no drivers
     Warning (13040): bidirectional pin "GPIO[34]" has no driver File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/DE10_LITE_Golden_Top.v Line: 122
     Warning (13040): bidirectional pin "GPIO[35]" has no driver File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/DE10_LITE_Golden_Top.v Line: 122
 Info (13025): Duplicate LATCH primitives merged into single LATCH primitive
-    Info (13026): Duplicate LATCH primitive "JOIN:j|SEG7DEC_2:s1|nHEX[4]" merged with LATCH primitive "JOIN:j|SEG7DEC_2:s1|nHEX[0]" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/SEG7DEC_2.v Line: 13
-    Info (13026): Duplicate LATCH primitive "JOIN:j|SEG7DEC_2:s1|nHEX[3]" merged with LATCH primitive "JOIN:j|SEG7DEC_2:s1|nHEX[0]" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/SEG7DEC_2.v Line: 13
-    Info (13026): Duplicate LATCH primitive "JOIN:j|SEG7DEC_2:s5|nHEX[5]" merged with LATCH primitive "JOIN:j|SEG7DEC_2:s1|nHEX[5]" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/SEG7DEC_2.v Line: 13
-    Info (13026): Duplicate LATCH primitive "JOIN:j|SEG7DEC_2:s3|nHEX[3]" merged with LATCH primitive "JOIN:j|SEG7DEC_2:s3|nHEX[0]" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/SEG7DEC_2.v Line: 13
-    Info (13026): Duplicate LATCH primitive "JOIN:j|SEG7DEC_2:s3|nHEX[4]" merged with LATCH primitive "JOIN:j|SEG7DEC_2:s3|nHEX[0]" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/SEG7DEC_2.v Line: 13
-    Info (13026): Duplicate LATCH primitive "JOIN:j|SEG7DEC_2:s5|nHEX[4]" merged with LATCH primitive "JOIN:j|SEG7DEC_2:s5|nHEX[0]" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/SEG7DEC_2.v Line: 13
     Info (13026): Duplicate LATCH primitive "JOIN:j|SEG7DEC_2:s5|nHEX[3]" merged with LATCH primitive "JOIN:j|SEG7DEC_2:s5|nHEX[0]" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/SEG7DEC_2.v Line: 13
 Warning (13012): Latch JOIN:j|SEG7DEC_1:s0|nHEX[0] has unsafe behavior File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/SEG7DEC_1.v Line: 14
     Warning (13013): Ports D and ENA on the latch are fed by the same signal JOIN:j|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 41
@@ -698,6 +677,12 @@ Warning (13012): Latch JOIN:j|SEG7DEC_2:s1|nHEX[1] has unsafe behavior File: C:/
 Warning (13012): Latch JOIN:j|SEG7DEC_2:s1|nHEX[2] has unsafe behavior File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/SEG7DEC_2.v Line: 13
     Warning (13013): Ports D and ENA on the latch are fed by the same signal JOIN:j|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 41
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal JOIN:j|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 41
+Warning (13012): Latch JOIN:j|SEG7DEC_2:s1|nHEX[3] has unsafe behavior File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/SEG7DEC_2.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal JOIN:j|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 41
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal JOIN:j|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 41
+Warning (13012): Latch JOIN:j|SEG7DEC_2:s1|nHEX[4] has unsafe behavior File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/SEG7DEC_2.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal JOIN:j|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 41
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal JOIN:j|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 41
 Warning (13012): Latch JOIN:j|SEG7DEC_2:s1|nHEX[5] has unsafe behavior File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/SEG7DEC_2.v Line: 13
     Warning (13013): Ports D and ENA on the latch are fed by the same signal JOIN:j|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 41
     Warning (13013): Ports ENA and PRE on the latch are fed by the same signal JOIN:j|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 41
@@ -734,6 +719,12 @@ Warning (13012): Latch JOIN:j|SEG7DEC_2:s3|nHEX[1] has unsafe behavior File: C:/
 Warning (13012): Latch JOIN:j|SEG7DEC_2:s3|nHEX[2] has unsafe behavior File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/SEG7DEC_2.v Line: 13
     Warning (13013): Ports D and ENA on the latch are fed by the same signal JOIN:j|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 41
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal JOIN:j|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 41
+Warning (13012): Latch JOIN:j|SEG7DEC_2:s3|nHEX[3] has unsafe behavior File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/SEG7DEC_2.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal JOIN:j|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 41
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal JOIN:j|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 41
+Warning (13012): Latch JOIN:j|SEG7DEC_2:s3|nHEX[4] has unsafe behavior File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/SEG7DEC_2.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal JOIN:j|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 41
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal JOIN:j|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 41
 Warning (13012): Latch JOIN:j|SEG7DEC_2:s3|nHEX[5] has unsafe behavior File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/SEG7DEC_2.v Line: 13
     Warning (13013): Ports D and ENA on the latch are fed by the same signal JOIN:j|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 41
     Warning (13013): Ports ENA and PRE on the latch are fed by the same signal JOIN:j|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 41
@@ -770,6 +761,12 @@ Warning (13012): Latch JOIN:j|SEG7DEC_2:s5|nHEX[1] has unsafe behavior File: C:/
 Warning (13012): Latch JOIN:j|SEG7DEC_2:s5|nHEX[2] has unsafe behavior File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/SEG7DEC_2.v Line: 13
     Warning (13013): Ports D and ENA on the latch are fed by the same signal JOIN:j|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 41
     Warning (13013): Ports ENA and CLR on the latch are fed by the same signal JOIN:j|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 41
+Warning (13012): Latch JOIN:j|SEG7DEC_2:s5|nHEX[4] has unsafe behavior File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/SEG7DEC_2.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal JOIN:j|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 41
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal JOIN:j|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 41
+Warning (13012): Latch JOIN:j|SEG7DEC_2:s5|nHEX[5] has unsafe behavior File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/SEG7DEC_2.v Line: 13
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal JOIN:j|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 41
+    Warning (13013): Ports ENA and PRE on the latch are fed by the same signal JOIN:j|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 41
 Warning (13012): Latch JOIN:j|SEG7DEC_2:s5|nHEX[6] has unsafe behavior File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/SEG7DEC_2.v Line: 13
     Warning (13013): Ports D and ENA on the latch are fed by the same signal JOIN:j|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 41
     Warning (13013): Ports ENA and PRE on the latch are fed by the same signal JOIN:j|CONTROL:c0|STATE[0] File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/CONTROL.v Line: 41
@@ -842,15 +839,15 @@ Warning (21074): Design contains 9 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[6]" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/DE10_LITE_Golden_Top.v Line: 91
     Warning (15610): No output dependent on input pin "GSENSOR_INT[1]" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/DE10_LITE_Golden_Top.v Line: 106
     Warning (15610): No output dependent on input pin "GSENSOR_INT[2]" File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_3/DE10_LITE_Golden_Top.v Line: 106
-Info (21057): Implemented 395 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 518 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 17 input pins
     Info (21059): Implemented 97 output pins
     Info (21060): Implemented 71 bidirectional pins
-    Info (21061): Implemented 210 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 271 warnings
-    Info: Peak virtual memory: 4810 megabytes
-    Info: Processing ended: Mon Dec 04 23:02:05 2023
-    Info: Elapsed time: 00:00:21
-    Info: Total CPU time (on all processors): 00:00:18
+    Info (21061): Implemented 333 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 290 warnings
+    Info: Peak virtual memory: 4811 megabytes
+    Info: Processing ended: Tue Dec 05 18:30:34 2023
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:16
 
 

@@ -1,0 +1,78 @@
+C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/BTN_IN.v {1 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/BTN_IN.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module BTN_IN
+
+Top level modules:
+	BTN_IN
+
+} {} {}} C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/CHECK.v {1 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/CHECK.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module CHECK
+
+Top level modules:
+	CHECK
+
+} {} {}} C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/DB.v {1 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/DB.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module DB
+
+Top level modules:
+	DB
+
+} {} {}} C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/SEG7DEC_1.v {1 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/SEG7DEC_1.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SEG7DEC_1
+
+Top level modules:
+	SEG7DEC_1
+
+} {} {}} C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/SEG7DEC_2.v {1 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/SEG7DEC_2.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module SEG7DEC_2
+
+Top level modules:
+	SEG7DEC_2
+
+} {} {}} C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/JOIN_SIM_5.v {1 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/JOIN_SIM_5.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module JOIN_SIM_5
+
+Top level modules:
+	JOIN_SIM_5
+
+} {} {}} C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/INPUT.v {1 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/INPUT.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module INPUT
+
+Top level modules:
+	INPUT
+
+} {} {}} C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/WIN_LOSE.v {1 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/WIN_LOSE.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module WIN_LOSE
+
+Top level modules:
+	WIN_LOSE
+
+} {} {}} C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/JOIN.v {1 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/JOIN.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module JOIN
+
+Top level modules:
+	JOIN
+
+} {} {}} C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/CONTROL.v {1 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/CONTROL.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module CONTROL
+
+Top level modules:
+	CONTROL
+
+} {} {}} C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/READY.v {1 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/JOIN_SIM_5/READY.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module READY
+
+Top level modules:
+	READY
+
+} {} {}}

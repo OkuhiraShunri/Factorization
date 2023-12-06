@@ -1,0 +1,1 @@
+1PTEST_3に、CHECKモジュールとWIN_LOSEモジュールを結合。
