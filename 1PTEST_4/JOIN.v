@@ -19,6 +19,8 @@ wire [3:0] seg1, seg2, seg3, seg4, seg5, seg6, seg1_q, seg2_q, seg3_q;
 wire [3:0] answer1, answer2, answer3;
 wire [1:0] result, judg;
 
+
+
 //BTN_IN b0(.CLK(CLK), .RST(RST), .nBIN(KEY), .BOUT({sel, dec, clr, ready}));//SW[0]チャタリングなし
 BTN_IN b0(.CLK(CLK), .RST(RST), .nBIN(KEY), .BOUT({sel, dec, clr, que, ready}));//
  
@@ -26,7 +28,9 @@ BTN_IN b0(.CLK(CLK), .RST(RST), .nBIN(KEY), .BOUT({sel, dec, clr, que, ready}));
 //            .QUE(q_ok), .OK_IN(ok), .READY_OUT(ready2), .STATE(state), .SEL(sel), .DEC(dec), .CLR_IN(clr), .SEL_OUT(sel2), .DEC_OUT(dec2), .CLR_OUT(clr2));
 
 CONTROL c0(.CLK(CLK), .RST(RST), .READY_IN(ready), .QUE_IN(que), .WRONG_IN(result), .JUDG_IN(judg), .HP_IN(HP), 
-           .QUE(q_ok), .OK_IN(ok), .READY_OUT(ready2), .STATE(state), .SEL(sel), .DEC(dec), .CLR_IN(clr), .SEL_OUT(sel2), .DEC_OUT(dec2), .CLR_OUT(clr2));
+           .QUE(q_ok), .OK_IN(ok), .READY_OUT(ready2), .STATE(state), .SEL(sel), .DEC(dec), .CLR_IN(clr), .SEL_OUT(sel2), .DEC_OUT(dec2), .CLR_OUT(clr2),
+           
+           );
 
 READY r0(.CLK(CLK), .RST(RST), .OK(ok), .STATE(state), .NUM(num), .READY_1P(ready2));
 
@@ -38,7 +42,7 @@ INPUT i0(.CLK(CLK), .RST(RST), .QUESTION(question), .STATE(state), .SEL(sel2), .
          .COUNT1_OUT(answer1), .COUNT2_OUT(answer2), .COUNT3_OUT(answer3), .QUE_OK(q_ok), .LED(LEDR)
 	);
 
-CHECK ch0(.CLK(CLK), .RST(RST), .ANSWER_1(answer1), .ANSWER_2(answer2), .ANSWER_3(answer3), .QUESTION(question), .RESULT(result));
+CHECK ch0(.CLK(CLK), .RST(RST), .ANSWER_1(answer1), .ANSWER_2(answer2), .ANSWER_3(answer3), .QUESTION(question), .RESULT(result), .STATE(state));
 
 WIN_LOSE w0(.CLK(CLK), .RST(RST), .MINE(result), .WL_OUT(judg));
 

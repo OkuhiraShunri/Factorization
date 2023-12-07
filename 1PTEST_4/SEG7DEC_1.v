@@ -45,7 +45,7 @@ always @* begin
         nHEX = 7'b0000001;
     end
     else if(STATE == 4'b0111)begin//WRONG
-        nHEX = 7'b0001000;
+        nHEX = 7'b1110110;
     end
 end
 

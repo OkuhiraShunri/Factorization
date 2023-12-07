@@ -3,6 +3,8 @@ module INPUT(
   input [3:0] STATE,
   input [23:0] QUESTION,
   input  DEC, CLK, RST, CLR,//DEC???
+
+
 	 //input [1:0] RESULT, 
   output reg [3:0] SEG1, SEG2, SEG3, SEG4, SEG5, SEG6,
   output reg [3:0] SEG1_Q, SEG2_Q, SEG3_Q, 
@@ -32,7 +34,10 @@ initial begin
       COUNT1_OUT <= 4'b0;
       COUNT2_OUT <= 4'b0;
       COUNT3_OUT <= 4'b0;
+
 end
+
+
 
 
 reg [11:0] QUESTION_r;// ??? + ???????
@@ -87,7 +92,7 @@ assign LED = LED_r;
 
 
 
-always @(posedge CLK) begin
+always @(posedge CLK) begin//?
    if(STATE == 4'b0100)begin
       SEG1 <= COUNT1; //INPUT
       SEG2 <= COUNT1;
@@ -152,8 +157,9 @@ always @(posedge CLK) begin//COUNT??????
       COUNT3 <= 0;
     end
   end
-  else if(STATE == 4'b0110 || STATE == 4'b1000 || STATE == 4'b1001 || STATE == 4'b1010 || STATE == 4'b1011 || STATE == 4'b0111)begin//
+  else if(STATE == 4'b0110 || STATE == 4'b1000 || STATE == 4'b1001 || STATE == 4'b1010 || STATE == 4'b1011 || STATE == 4'b0111)begin//自分の回答をリセット
   //DRAW GOOD OUCH WIN  LOSE  wrong //modif
+      
       COUNT1 <= 0;
       COUNT2 <= 0;
       COUNT3 <= 0;
@@ -161,7 +167,7 @@ always @(posedge CLK) begin//COUNT??????
 end
 
 always @(posedge CLK)begin//????????????????????????????????????????STATE?INPUT??????????
-	if(STATE == 4'b0100)begin
+	if(STATE == 4'b0100)begin//STATE == INPUT
     if(DEC)begin
       COUNT1_OUT <= COUNT1;
       COUNT2_OUT <= COUNT2;
@@ -172,6 +178,11 @@ always @(posedge CLK)begin//????????????????????????????????????????STATE?INPUT?
       COUNT2_OUT <= COUNT2_OUT;
       COUNT3_OUT <= COUNT3_OUT;
     end
+  end
+  else begin
+    COUNT1_OUT <= 4'b0;
+    COUNT2_OUT <= 4'b0;
+    COUNT3_OUT <= 4'b0;
   end
 end
 

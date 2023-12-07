@@ -6,6 +6,9 @@ module CONTROL(
     input QUE,//QUE is INPUT's q_ok    Question is already  not 0 or  0
     input [1:0] JUDG_IN,  //???????????
     input [1:0] WRONG_IN, //??????????????
+
+  
+
     output reg READY_OUT,
     output reg [3:0] STATE, 
 	 output reg [2:0] SEL_OUT,
@@ -91,7 +94,7 @@ end
 
 always @(posedge  CLK) begin
     case(cur)
-      READY:   NEED_1SEC <= 0; //modi
+      READY:   NEED_1SEC <= 0; //modi NEED_1SECを0に戻す処理
       QUESTION:NEED_1SEC <= 0; //modi
       INPUT:   NEED_1SEC <= 0; //modi
       WRONG:   NEED_1SEC <= 1; 
