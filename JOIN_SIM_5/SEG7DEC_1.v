@@ -41,11 +41,11 @@ always @* begin
             default:nHEX = 7'b1111111;//?????
         endcase
     end
-    else if(STATE == 4'b1000)begin
-        nHEX = 7'b0100001;
+    else if(STATE == 4'b1000)begin//GOOD
+        nHEX = 7'b0000001;
     end
-    else if(STATE == 4'b0111)begin
-        nHEX = 7'b0001000;
+    else if(STATE == 4'b0111)begin//WRONG
+        nHEX = 7'b1110110;
     end
 end
 

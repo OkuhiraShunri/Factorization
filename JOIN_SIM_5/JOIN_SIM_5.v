@@ -52,8 +52,10 @@ initial begin
 #20 ready = 1;
 #20 que = 1; //Swich INPUT
 #20 sel = 3'b001;
-#10 sel = 3'b000;
-
+#10 sel = 3'b002;
+#15 dec = 1;
+#10 dec = 0;
+#10 que = 0; 
 end
 
 

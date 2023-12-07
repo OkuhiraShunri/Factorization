@@ -1,11 +1,14 @@
 module CONTROL(
     input [2:0] SEL,
-    input CLK, RST, READY_IN, QUE_IN, DEC, CLR_IN,//QUE_IN??????????????????????
+    input CLK, RST, READY_IN, QUE_IN, DEC, CLR_IN,//QUE_IN is BOUT
     input OK_IN, //????????????READY?????????????????
     input [1:0] HP_IN,//00????,01??????,10??????
-    input QUE,//??????????????1????????0?QUE????????????????
+    input QUE,//QUE is INPUT's q_ok    Question is already  not 0 or  0
     input [1:0] JUDG_IN,  //???????????
     input [1:0] WRONG_IN, //??????????????
+
+  
+
     output reg READY_OUT,
     output reg [3:0] STATE, 
 	 output reg [2:0] SEL_OUT,
@@ -17,11 +20,20 @@ initial begin
   R <= 0;
 end
 always @(posedge CLK) begin
-     if(R == 0 && QUE_IN)
-	      R <= 1;
-		else if(R == 1 && QUE_IN)
+     if(R == 0 && QUE_IN)   //R is Flag of QUESTION   QUE_IN is SW9
+	      R <= 1;             
+		else if(R == 1 && QUE_IN) //if question is not prepared ,don't go next
 		   R <= 0;
 end
+// initial begin
+//   R2 <= 0;
+// end
+// always @(posedge CLK) begin
+//      if(R2 == 0 && DEC)
+// 	      R2 <= 1;
+// 		else if(R2 == 1 && DEC)
+// 		   R2 <= 0;
+// end
 
 
 
@@ -30,7 +42,7 @@ localparam  READY = 4'b0010, QUESTION = 4'b0011, INPUT = 4'b0100, DRAW = 4'b0110
             , WRONG = 4'b0111, GOOD = 4'b1000, OUCH = 4'b1001, WIN = 4'b1010, LOSE = 4'b1011;
 
 
-always @( posedge CLK) begin //
+always @( posedge CLK) begin // When Clear
   if(RST)
     cur <= READY;
   else
@@ -38,9 +50,9 @@ always @( posedge CLK) begin //
 end
 
 
-always @(posedge CLK) begin
+always @(posedge CLK) begin 
   if(cur == READY)begin
-      READY_OUT <= READY_IN;
+      READY_OUT <= READY_IN;   //Through  reg ready for READY module
       STATE <= 4'b0010;
   end
   else if(cur == QUESTION)begin
@@ -48,9 +60,10 @@ always @(posedge CLK) begin
   end
   else if(cur == INPUT)begin
       STATE <= 4'b0100;
-      SEL_OUT <= SEL;
-      DEC_OUT <= DEC;
-      CLR_OUT <= CLR_IN;
+      SEL_OUT <= SEL;        //Through  reg ...
+      DEC_OUT <= DEC;        //Through  reg ...
+      //DEC_OUT <= R2;
+      CLR_OUT <= CLR_IN;     //Through  reg...
   end
   else if(cur == GOOD)begin
     STATE <= 4'b1000;
@@ -81,6 +94,9 @@ end
 
 always @(posedge  CLK) begin
     case(cur)
+      READY:   NEED_1SEC <= 0; //modi NEED_1SECを0に戻す処理
+      QUESTION:NEED_1SEC <= 0; //modi
+      INPUT:   NEED_1SEC <= 0; //modi
       WRONG:   NEED_1SEC <= 1; 
       GOOD:    NEED_1SEC <= 1;
       OUCH:    NEED_1SEC <= 1; 
@@ -92,19 +108,33 @@ end
 
 reg [25:0] cnt;
 wire EN1HZ = (cnt==26'd49_999_999);
-initial begin
-    cnt <= 0;
-end
+// initial begin
+//     cnt <= 0;
+// end
 
-always @(posedge CLK)begin
+// always @(posedge CLK)begin
+//     if(RST)
+//       cnt <= 26'b0;
+//     //else if(EN1HZ || NEED_1SEC == 0)
+//     else if(EN1HZ)
+//       cnt <= 26'b0;
+//      else if(NEED_1SEC != 1)
+//        //cnt <= cnt + 26'b1;
+//        cnt <= cnt ;
+//     else 
+//       cnt <= cnt + 26'b1;   
+// 
+always @(posedge CLK)begin   //Count 1sec
     if(RST)
       cnt <= 26'b0;
-    else if(EN1HZ || NEED_1SEC == 0)
+    else if(EN1HZ || NEED_1SEC == 0) // Enough = 0 || First =0
+    //else if(EN1HZ)
       cnt <= 26'b0;
-    else if(NEED_1SEC == 1)
-      cnt <= cnt + 26'b1; 
+    else if(NEED_1SEC == 1) // When  WRONG ,GOOD,OUCH,DRAW ,WIN ,LOSE  
+       cnt <= cnt + 26'b1;  //inc
+       //cnt <= cnt ;
     else 
-      cnt <= cnt;   
+      cnt <= 26'b0;  //cnt <= cnt is error
 end
 
 
@@ -137,13 +167,13 @@ always @(posedge CLK)begin
         INPUT: 
                 if(R == 0 && QUE)
                     nxt <= QUESTION;
-                else if(WRONG_IN == 11)
+                else if(WRONG_IN == 2'b11)
                     nxt <= WRONG;
-                else if(JUDG_IN == 01)
+                else if(JUDG_IN == 2'b01)
                     nxt <= GOOD;
-                else if(JUDG_IN == 10)
+                else if(JUDG_IN == 2'b10)
                     nxt <= OUCH;
-                else if(JUDG_IN == 11)
+                else if(JUDG_IN == 2'b11)
                     nxt <= DRAW;
                 else
                     nxt <= INPUT;
