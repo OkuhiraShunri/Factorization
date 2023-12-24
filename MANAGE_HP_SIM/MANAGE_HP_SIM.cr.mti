@@ -1,0 +1,29 @@
+C:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/MANAGE_HP_SIM.v {1 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/MANAGE_HP_SIM.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module MANAGE_HP_SIM
+
+Top level modules:
+	MANAGE_HP_SIM
+
+} {} {}} C:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/JOIN.v {1 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/JOIN.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module JOIN
+
+Top level modules:
+	JOIN
+
+} {} {}} C:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/HP_LED.v {1 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/HP_LED.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module HP_LED
+
+Top level modules:
+	HP_LED
+
+} {} {}} C:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/CONTROL.v {1 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/CONTROL.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module CONTROL
+
+Top level modules:
+	CONTROL
+
+} {} {}}

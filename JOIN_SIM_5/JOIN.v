@@ -1,8 +1,9 @@
 module JOIN(
     input [1:0] HP,
-    input  CLK, RST,
-    //input QUE,
-    input [6:0] KEY,
+    input CLK, RST,
+    input QUE, DEC, READY, CLR,
+    input [2:0] SEL,
+    //input [6:0] KEY,
     output [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, 
    // output [3:0] COUNT1_OUT, COUNT2_OUT, COUNT3_OUT,
     output LEDR
@@ -22,15 +23,13 @@ wire [1:0] result, judg;
 
 
 //BTN_IN b0(.CLK(CLK), .RST(RST), .nBIN(KEY), .BOUT({sel, dec, clr, ready}));//SW[0]チャタリングなし
-BTN_IN b0(.CLK(CLK), .RST(RST), .nBIN(KEY), .BOUT({sel, dec, clr, que, ready}));//
+//BTN_IN b0(.CLK(CLK), .RST(RST), .nBIN(KEY), .BOUT({sel, dec, clr, que, ready}));//
  
 // CONTROL c0(.CLK(CLK), .RST(RST), .READY_IN(ready), .QUE_IN(QUE), .WRONG_IN(WRONG), .JUDG_IN(JUDG), .HP_IN(HP), 
 //            .QUE(q_ok), .OK_IN(ok), .READY_OUT(ready2), .STATE(state), .SEL(sel), .DEC(dec), .CLR_IN(clr), .SEL_OUT(sel2), .DEC_OUT(dec2), .CLR_OUT(clr2));
 
-CONTROL c0(.CLK(CLK), .RST(RST), .READY_IN(ready), .QUE_IN(que), .WRONG_IN(result), .JUDG_IN(judg), .HP_IN(HP), 
-           .QUE(q_ok), .OK_IN(ok), .READY_OUT(ready2), .STATE(state), .SEL(sel), .DEC(dec), .CLR_IN(clr), .SEL_OUT(sel2), .DEC_OUT(dec2), .CLR_OUT(clr2),
-           
-           );
+CONTROL c0(.CLK(CLK), .RST(RST), .READY_IN(READY), .QUE_IN(QUE), .WRONG_IN(result), .JUDG_IN(judg), .HP_IN(HP), 
+           .QUE(q_ok), .OK_IN(ok), .READY_OUT(ready2), .STATE(state), .SEL(SEL), .DEC(DEC), .CLR_IN(CLR), .SEL_OUT(sel2), .DEC_OUT(dec2), .CLR_OUT(clr2) );
 
 READY r0(.CLK(CLK), .RST(RST), .OK(ok), .STATE(state), .NUM(num), .READY_1P(ready2));
 

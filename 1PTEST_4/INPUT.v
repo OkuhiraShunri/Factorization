@@ -173,16 +173,21 @@ always @(posedge CLK)begin//????????????????????????????????????????STATE?INPUT?
       COUNT2_OUT <= COUNT2;
       COUNT3_OUT <= COUNT3;
     end
-    else begin
+    // else begin
+    //   COUNT1_OUT <= COUNT1_OUT;
+    //   COUNT2_OUT <= COUNT2_OUT;
+    //   COUNT3_OUT <= COUNT3_OUT;
+    // end
+  end
+  else if(STATE == 4'b0111 || STATE == 4'b1000) begin
+     COUNT1_OUT <= 4'b0;
+     COUNT2_OUT <= 4'b0;
+     COUNT3_OUT <= 4'b0;
+  end
+  else begin
       COUNT1_OUT <= COUNT1_OUT;
       COUNT2_OUT <= COUNT2_OUT;
       COUNT3_OUT <= COUNT3_OUT;
-    end
-  end
-  else begin
-    COUNT1_OUT <= 4'b0;
-    COUNT2_OUT <= 4'b0;
-    COUNT3_OUT <= 4'b0;
   end
 end
 

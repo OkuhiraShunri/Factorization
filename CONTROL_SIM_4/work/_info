@@ -1,0 +1,98 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_2
+vCONTROL
+Z0 !s110 1703343372
+!i10b 1
+!s100 AkFlcmNE=[clEAbPgJhG;0
+IH6VR5H;7O9Y;iN:?0[D6G0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_4
+w1703338989
+8C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_4/CONTROL.v
+FC:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_4/CONTROL.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1703343372.000000
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_4/CONTROL.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_4/CONTROL.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@c@o@n@t@r@o@l
+vCONTROL_SIM_4
+R0
+!i10b 1
+!s100 JIT<<lRgNT_4`VKbC2T[01
+I>TT378FLFiMKjcBlQ]kHW2
+R1
+R2
+w1703343357
+8C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_4/CONTROL_SIM_4.v
+FC:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_4/CONTROL_SIM_4.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_4/CONTROL_SIM_4.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_4/CONTROL_SIM_4.v|
+!i113 1
+R5
+R6
+n@c@o@n@t@r@o@l_@s@i@m_4
+vJOIN
+R0
+!i10b 1
+!s100 2k4CT4QJmml9XQK2ECHfB3
+ILoO12<<0c@mOMhN6LE8me1
+R1
+R2
+w1703340724
+8C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_4/JOIN.v
+FC:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_4/JOIN.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_4/JOIN.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_4/JOIN.v|
+!i113 1
+R5
+R6
+n@j@o@i@n
+vREADY
+!s110 1703343373
+!i10b 1
+!s100 cchV@e]GY`4h^8f5i9`JG0
+IYCH6LLokAGLS4zIXTZ=1]2
+R1
+R2
+w1703339142
+8C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_4/READY.v
+FC:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_4/READY.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1703343373.000000
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_4/READY.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_4/READY.v|
+!i113 1
+R5
+R6
+n@r@e@a@d@y

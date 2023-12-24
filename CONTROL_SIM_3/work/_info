@@ -1,0 +1,98 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/OkuhiraShunri/factori/Factorization/CHECK_SIM
+vCNT1SEC
+Z0 !s110 1702098173
+!i10b 1
+!s100 IFE>4aH=QDV2Vzn[BjhAg2
+If5VD6nmkkN<V?63F9UVN<3
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_3
+w1702041678
+8C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_3/CNT1SEC.v
+FC:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_3/CNT1SEC.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1702098173.000000
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_3/CNT1SEC.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_3/CNT1SEC.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@c@n@t1@s@e@c
+vCONTROL
+R0
+!i10b 1
+!s100 ;jO^7E54d:lFh6_>UMNZP1
+I4ah]b?cSDN3_E3l;_;jHR1
+R1
+R2
+w1702055856
+8C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_3/CONTROL.v
+FC:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_3/CONTROL.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_3/CONTROL.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_3/CONTROL.v|
+!i113 1
+R5
+R6
+n@c@o@n@t@r@o@l
+vCONTROL_SIM
+R0
+!i10b 1
+!s100 f]>gKnmbzhl74GFPD`ISD2
+InTLzIVnaMYO?c_nc>kfIA3
+R1
+R2
+w1702098151
+8C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_3/CONTROL_SIM.v
+FC:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_3/CONTROL_SIM.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_3/CONTROL_SIM.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_3/CONTROL_SIM.v|
+!i113 1
+R5
+R6
+n@c@o@n@t@r@o@l_@s@i@m
+vJOIN
+R0
+!i10b 1
+!s100 Mj=7=ZX@?SXP9;ZFP9DHP2
+Ihe4zdRd6c:>jObh]6jL491
+R1
+R2
+w1702048742
+8C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_3/JOIN.v
+FC:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_3/JOIN.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_3/JOIN.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_3/JOIN.v|
+!i113 1
+R5
+R6
+n@j@o@i@n

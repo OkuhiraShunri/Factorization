@@ -1,0 +1,4 @@
+Info (10281): Verilog HDL Declaration information at JOIN.v(2): object "HP" differs only in case from object "hp" in the same scope File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_6/JOIN.v Line: 2
+Info (10281): Verilog HDL Declaration information at CHECK.v(3): object "ANSWER_1" differs only in case from object "answer_1" in the same scope File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_6/CHECK.v Line: 3
+Info (10281): Verilog HDL Declaration information at CHECK.v(3): object "ANSWER_2" differs only in case from object "answer_2" in the same scope File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_6/CHECK.v Line: 3
+Info (10281): Verilog HDL Declaration information at CHECK.v(3): object "ANSWER_3" differs only in case from object "answer_3" in the same scope File: C:/Users/OkuhiraShunri/factori/Factorization/1PTEST_6/CHECK.v Line: 3

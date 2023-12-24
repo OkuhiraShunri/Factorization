@@ -1,0 +1,142 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/OkuhiraShunri/factori/Factorization/CHECK_SIM
+vCONTROL
+Z0 !s110 1702371851
+!i10b 1
+!s100 zB;T3gdFjCSo7i5jEYhYb0
+IN5?QOIUIcUzFDL0>9TI043
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM
+w1702125722
+8C:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/CONTROL.v
+FC:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/CONTROL.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1702371850.000000
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/CONTROL.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/CONTROL.v|
+!i113 1
+Z4 o-work work
+Z5 tCvgOpt 0
+n@c@o@n@t@r@o@l
+vCONTROL_SIM
+!s110 1702124881
+!i10b 1
+!s100 1jhR]S0^Zh6HMOlLKZL1j0
+I_:iL<l_gH^DCSJ]c;R0nQ0
+R1
+R2
+w1702124806
+Z6 8C:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/MANAGE_HP_SIM.v
+Z7 FC:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/MANAGE_HP_SIM.v
+L0 2
+R3
+r1
+!s85 0
+31
+!s108 1702124881.000000
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/MANAGE_HP_SIM.v|
+Z8 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/MANAGE_HP_SIM.v|
+!i113 1
+R4
+R5
+n@c@o@n@t@r@o@l_@s@i@m
+vHP_LED
+R0
+!i10b 1
+!s100 P5Hn3g=bf?B@8?:n;;9kS3
+IVGC3Ydi38=eLBP?DH:AQj1
+R1
+R2
+w1702117849
+8C:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/HP_LED.v
+FC:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/HP_LED.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z9 !s108 1702371851.000000
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/HP_LED.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/HP_LED.v|
+!i113 1
+R4
+R5
+n@h@p_@l@e@d
+vJOIN
+R0
+!i10b 1
+!s100 L2PDKNS4MTkNnWO?l7WhS3
+IgjcI0f2U9<lFWc[^>bITa0
+R1
+R2
+w1702124662
+8C:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/JOIN.v
+FC:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/JOIN.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/JOIN.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/JOIN.v|
+!i113 1
+R4
+R5
+n@j@o@i@n
+vMANAGE_HP
+R0
+!i10b 1
+!s100 ^cXK074ZCVB5JDnGhzk^e2
+I@:9^giW=PDm>>n^bZ2jPJ3
+R1
+R2
+w1702371819
+8C:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/MANAGE_HP.v
+FC:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/MANAGE_HP.v
+L0 1
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/MANAGE_HP.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/MANAGE_HP.v|
+!i113 1
+R4
+R5
+n@m@a@n@a@g@e_@h@p
+vMANAGE_HP_SIM
+R0
+!i10b 1
+!s100 Bzi5EPz`^CUzi:5SaeTTC0
+IVhcS>BJofl9Qf4@EdN?Qf0
+R1
+R2
+w1702371321
+R6
+R7
+L0 2
+R3
+r1
+!s85 0
+31
+R9
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM/MANAGE_HP_SIM.v|
+R8
+!i113 1
+R4
+R5
+n@m@a@n@a@g@e_@h@p_@s@i@m

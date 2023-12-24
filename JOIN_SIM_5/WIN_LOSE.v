@@ -17,7 +17,7 @@ always @(posedge CLK) begin
     else if(ENEMY == 01 && MINE != 01)
         WL_OUT <= 2'b10; //相手勝ち
     else if(MINE  == 01 && ENEMY != 01)
-        WL_OUT <= 2'b01; //自分勝ち
+        WL_OUT <= 2'b01; //�分勝ち
     else
         WL_OUT <= 2'b00; //無入力、その他 勝利判定してないときはWL_OUTは00出力
           

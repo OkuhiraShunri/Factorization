@@ -1,0 +1,29 @@
+
+State Machine - |DE10_LITE_Golden_Top|JOIN:j|MANAGE_HP:m0|ENEMY_HP
+Name ENEMY_HP.0101 
+ENEMY_HP.0000 0 
+ENEMY_HP.0101 1 
+
+State Machine - |DE10_LITE_Golden_Top|JOIN:j|CONTROL:c0|nxt
+Name nxt.LOSE nxt.WIN nxt.OUCH nxt.GOOD nxt.WRONG nxt.DRAW nxt.INPUT nxt.QUESTION nxt.READY 
+nxt.READY 0 0 0 0 0 0 0 0 0 
+nxt.QUESTION 0 0 0 0 0 0 0 1 1 
+nxt.INPUT 0 0 0 0 0 0 1 0 1 
+nxt.DRAW 0 0 0 0 0 1 0 0 1 
+nxt.WRONG 0 0 0 0 1 0 0 0 1 
+nxt.GOOD 0 0 0 1 0 0 0 0 1 
+nxt.OUCH 0 0 1 0 0 0 0 0 1 
+nxt.WIN 0 1 0 0 0 0 0 0 1 
+nxt.LOSE 1 0 0 0 0 0 0 0 1 
+
+State Machine - |DE10_LITE_Golden_Top|JOIN:j|CONTROL:c0|cur
+Name cur.LOSE cur.WIN cur.OUCH cur.GOOD cur.WRONG cur.DRAW cur.INPUT cur.QUESTION cur.READY 
+cur.READY 0 0 0 0 0 0 0 0 0 
+cur.QUESTION 0 0 0 0 0 0 0 1 1 
+cur.INPUT 0 0 0 0 0 0 1 0 1 
+cur.DRAW 0 0 0 0 0 1 0 0 1 
+cur.WRONG 0 0 0 0 1 0 0 0 1 
+cur.GOOD 0 0 0 1 0 0 0 0 1 
+cur.OUCH 0 0 1 0 0 0 0 0 1 
+cur.WIN 0 1 0 0 0 0 0 0 1 
+cur.LOSE 1 0 0 0 0 0 0 0 1 

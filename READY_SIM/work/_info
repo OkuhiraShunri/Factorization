@@ -1,0 +1,54 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/OkuhiraShunri/factori/Factorization/MANAGE_HP_SIM
+vREADY
+Z0 !s110 1702286806
+!i10b 1
+!s100 HG4Wzbim^_W>@7MPT8IJQ0
+IP9;cX?SIb]QgAY8UWV]:G0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/OkuhiraShunri/factori/Factorization/READY_SIM
+w1702286789
+8C:/Users/OkuhiraShunri/factori/Factorization/READY_SIM/READY.v
+FC:/Users/OkuhiraShunri/factori/Factorization/READY_SIM/READY.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1702286806.000000
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/READY_SIM/READY.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/READY_SIM/READY.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@r@e@a@d@y
+vREADY_SIM
+R0
+!i10b 1
+!s100 1?ecbjF]IXH_Y?CVBgaVW3
+IG]1R0KJmb6`l9ijDE5hL=2
+R1
+R2
+w1702286644
+8C:/Users/OkuhiraShunri/factori/Factorization/READY_SIM/READY_SIM.v
+FC:/Users/OkuhiraShunri/factori/Factorization/READY_SIM/READY_SIM.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/READY_SIM/READY_SIM.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/READY_SIM/READY_SIM.v|
+!i113 1
+R5
+R6
+n@r@e@a@d@y_@s@i@m

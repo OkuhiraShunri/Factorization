@@ -1,0 +1,8 @@
+C:/Users/OkuhiraShunri/factori/Factorization/READY_SIM/READY_SIM.v {1 {vlog -work work -stats=none C:/Users/OkuhiraShunri/factori/Factorization/READY_SIM/READY_SIM.v
+Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+-- Compiling module READY_SIM
+
+Top level modules:
+	READY_SIM
+
+} {} {}}

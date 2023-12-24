@@ -10,8 +10,8 @@ reg [2:0] sel;
 wire ready_out;
 wire [3:0] state; 
 wire [2:0] sel_out;
-wire dec_out, clr_out, need;
-wire [2:0] cnt;
+wire dec_out, clr_out;
+//wire [2:0] cnt;
 
 
 
@@ -36,9 +36,9 @@ CONTROL a1(
  .STATE(state),
  .SEL_OUT(sel_out),
  .DEC_OUT(dec_out),
- .CLR_OUT(clr_out),
- .CNT(cnt),
- .NEED_1SEC(need)
+ .CLR_OUT(clr_out)
+ //.CNT(cnt),
+ //.NEED_1SEC(need)
 );
 
 always begin
@@ -64,6 +64,7 @@ initial begin
     que2 = 1;//Swich QUESTION
 #20 que = 1;//Swich INPUT
 #20 wrong = 2'b11;//Swich WRONG  
+#5 wrong = 2'b00;
 //#10 wrong = 2'b00;  
 
 end

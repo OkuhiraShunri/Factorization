@@ -1,0 +1,76 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Users/OkuhiraShunri/factori/Factorization/CONTROL_SIM_2
+vCHECK
+Z0 !s110 1702035990
+!i10b 1
+!s100 o2S<3k_6Y1e2mQ2IG=hln0
+IPO3oB[eB>c1U5?4z>93l^1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/Users/OkuhiraShunri/factori/Factorization/CHECK_SIM
+w1702033838
+8C:/Users/OkuhiraShunri/factori/Factorization/CHECK_SIM/CHECK.v
+FC:/Users/OkuhiraShunri/factori/Factorization/CHECK_SIM/CHECK.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1702035990.000000
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/CHECK_SIM/CHECK.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/CHECK_SIM/CHECK.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+n@c@h@e@c@k
+vCHECK_SIM
+R0
+!i10b 1
+!s100 46TT=@W8Y`oBlhNzX1k<T2
+IW_2D:STJZ1<@9Q@0ZR1:`3
+R1
+R2
+w1702035972
+Z7 8C:/Users/OkuhiraShunri/factori/Factorization/CHECK_SIM/CHECK_SIM.v
+Z8 FC:/Users/OkuhiraShunri/factori/Factorization/CHECK_SIM/CHECK_SIM.v
+L0 2
+R3
+r1
+!s85 0
+31
+R4
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/CHECK_SIM/CHECK_SIM.v|
+Z9 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/OkuhiraShunri/factori/Factorization/CHECK_SIM/CHECK_SIM.v|
+!i113 1
+R5
+R6
+n@c@h@e@c@k_@s@i@m
+vCONTROL_SIM
+!s110 1702035062
+!i10b 1
+!s100 z3G[RAcPDg76J2PU`FRMj3
+IVhKF=mN;D[VS>XGJ4[=f`2
+R1
+R2
+w1702035036
+R7
+R8
+L0 58
+R3
+r1
+!s85 0
+31
+!s108 1702035062.000000
+!s107 C:/Users/OkuhiraShunri/factori/Factorization/CHECK_SIM/CHECK_SIM.v|
+R9
+!i113 1
+R5
+R6
+n@c@o@n@t@r@o@l_@s@i@m
